@@ -50,7 +50,7 @@ summary:focus-visible {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1320px;
   width: calc(100% - 48px);
   margin-inline: auto;
 }
