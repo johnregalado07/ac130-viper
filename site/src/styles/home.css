@@ -1,6 +1,6 @@
-
 /* ========================================
    AC-130 VIPER — HOMEPAGE STYLES
+   Dark hero + light content sections
    ======================================== */
 
 /* Header & Navigation */
@@ -9,6 +9,7 @@
   z-index: 10;
   border-bottom: 1px solid #20344c;
   background: #071426;
+  color: #f5f9ff;
 }
 
 .nav {
@@ -53,8 +54,8 @@
 
 .desktop-nav a {
   font-size: 13px;
-  color: #b3c3d8;
-  transition: color .2s;
+  color: #d4e3f2;
+  transition: color 0.2s;
 }
 
 .desktop-nav a:hover,
@@ -89,6 +90,7 @@
     #071426 53%,
     #061020 100%
   );
+  color: #f5f9ff;
 }
 
 .hero-glow {
@@ -115,13 +117,20 @@
 }
 
 .eyebrow {
-  color: #56ccff;
+  color: #1489d7;
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 2px;
   display: flex;
   align-items: center;
   gap: 11px;
+}
+
+.hero .eyebrow,
+.hero .eyebrow a,
+.about .eyebrow,
+.contact .eyebrow {
+  color: #56ccff;
 }
 
 .status-dot {
@@ -278,6 +287,7 @@ h1 span {
   background: #0b2036;
   border-top: 1px solid #25415a;
   border-bottom: 1px solid #25415a;
+  color: #f5f9ff;
 }
 
 .strip-inner {
@@ -311,14 +321,26 @@ h1 span {
   margin-bottom: 46px;
 }
 
+.section-heading h2,
+.development-grid h2,
+.about h2,
+.contact h2 {
+  color: #0b1f33;
+}
+
 .section-heading p,
 .development-grid p,
 .about p,
 .contact p {
   font-size: 15px;
-  color: #a5b9cf;
+  color: #5a6f85;
   line-height: 1.9;
   max-width: 650px;
+}
+
+/* Technology section — white */
+#technology {
+  background: #ffffff;
 }
 
 /* Technology Cards */
@@ -330,24 +352,26 @@ h1 span {
 
 .feature-card {
   position: relative;
-  background: linear-gradient(145deg, #10253e, #0a1a2e);
-  border: 1px solid #29415b;
+  background: #ffffff;
+  border: 1px solid #dbe6f1;
   padding: 36px 30px;
   min-height: 315px;
-  border-radius: 9px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(7, 20, 38, 0.05);
 }
 
 .feature-card:hover {
-  border-color: #3a9dcf;
+  border-color: #8fcbef;
+  box-shadow: 0 18px 40px rgba(19, 141, 224, 0.1);
 }
 
 .feature-number {
-  color: #6286a8;
+  color: #7c95ad;
   font-size: 11px;
 }
 
 .feature-symbol {
-  color: #5bcafa;
+  color: #138de0;
   font-size: 45px;
   margin: 27px 0 23px;
 }
@@ -355,20 +379,21 @@ h1 span {
 h3 {
   font-size: 20px;
   margin-bottom: 16px;
+  color: #0b1f33;
 }
 
 .feature-card p {
   font-size: 13px;
   line-height: 1.9;
-  color: #a4b8ce;
+  color: #5f748a;
   margin: 0;
 }
 
-/* Development Section */
+/* Development Section — light gray/soft blue */
 .development {
-  background: #0a1b2e;
-  border-top: 1px solid #1d354e;
-  border-bottom: 1px solid #1d354e;
+  background: linear-gradient(180deg, #f4f8fc 0%, #edf4fa 100%);
+  border-top: 1px solid #d9e6f2;
+  border-bottom: 1px solid #d9e6f2;
 }
 
 .development-grid {
@@ -380,17 +405,18 @@ h3 {
 
 .text-link {
   display: inline-block;
-  color: #5bcaff;
+  color: #138de0;
   margin-top: 22px;
   font-size: 14px;
   font-weight: 700;
 }
 
 .status-panel {
-  background: #0d2238;
-  border: 1px solid #345471;
-  border-radius: 9px;
+  background: #ffffff;
+  border: 1px solid #d7e3ef;
+  border-radius: 12px;
   padding: 30px;
+  box-shadow: 0 12px 35px rgba(7, 20, 38, 0.06);
 }
 
 .panel-heading {
@@ -399,14 +425,15 @@ h3 {
   align-items: center;
   gap: 15px;
   padding-bottom: 28px;
-  border-bottom: 1px solid #2a435c;
+  border-bottom: 1px solid #dce7f0;
   font-size: 11px;
   font-weight: 750;
   letter-spacing: 1px;
+  color: #0b1f33;
 }
 
 .panel-indicator {
-  color: #66d2f5;
+  color: #138de0;
   font-size: 10px;
 }
 
@@ -415,29 +442,29 @@ h3 {
   justify-content: space-between;
   gap: 20px;
   padding: 20px 0;
-  border-bottom: 1px solid #254059;
+  border-bottom: 1px solid #e4edf5;
   font-size: 13px;
 }
 
 .status-line span {
-  color: #93a9c1;
+  color: #63788d;
 }
 
 .status-line strong {
-  color: #e7f4ff;
+  color: #0b1f33;
   text-align: right;
 }
 
 .panel-footnote {
   margin: 25px 0 0;
-  color: #9ab0c6;
+  color: #6b8094;
   font-size: 11px;
   line-height: 1.8;
 }
 
 /* About */
 .about {
-  background: radial-gradient(ellipse at 75% 50%, #143553, #071426 60%);
+  background: #ffffff;
 }
 
 .about .container {
@@ -456,8 +483,8 @@ h3 {
 
 /* Contact */
 .contact {
-  background: linear-gradient(145deg, #0d3554, #091d33);
-  border-top: 1px solid #295071;
+  background: linear-gradient(145deg, #f7fbff, #edf5fc);
+  border-top: 1px solid #d8e5f1;
 }
 
 .contact-content {
@@ -467,15 +494,20 @@ h3 {
 
 .contact .eyebrow {
   justify-content: center;
+  color: #1489d7;
 }
 
 .contact p {
   margin: 0 auto 30px;
 }
 
+.contact .button-primary {
+  box-shadow: 0 14px 30px rgba(19, 141, 224, 0.15);
+}
+
 .contact small {
   display: block;
-  color: #abc3d8;
+  color: #61778d;
   margin: 28px auto 0;
   line-height: 1.8;
 }
@@ -483,6 +515,7 @@ h3 {
 /* Footer */
 footer {
   background: #050e1b;
+  color: #f5f9ff;
 }
 
 .footer-top {
@@ -539,6 +572,7 @@ footer {
     top: 45px;
     min-width: 215px;
     background: #102740;
+    color: #f5f9ff;
     padding: 20px;
     display: flex;
     flex-direction: column;
