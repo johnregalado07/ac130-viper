@@ -1,4 +1,3 @@
-
 :root {
   --navy: #071426;
   --navy-dark: #050e1b;
@@ -6,8 +5,13 @@
   --blue: #138de0;
   --cyan: #4fc6ff;
   --white: #f5f9ff;
-  --muted: #a5b9cf;
-  --border: #29415b;
+  --page-white: #ffffff;
+  --soft-bg: #f4f8fc;
+  --soft-bg-2: #edf4fa;
+  --ink: #0b1f33;
+  --ink-soft: #5a6f85;
+  --border: #d8e3ef;
+  --border-dark: #29415b;
 }
 
 * {
@@ -20,8 +24,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--navy);
-  color: var(--white);
+  background: var(--page-white);
+  color: var(--ink);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -63,7 +67,7 @@ h2 {
 }
 
 h2 span {
-  color: var(--cyan);
+  color: var(--blue);
 }
 
 .button-primary,
@@ -75,16 +79,22 @@ h2 span {
   padding: 17px 22px;
   font-size: 13px;
   font-weight: 750;
-  transition: transform .2s, background .2s;
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .button-primary {
   background: var(--blue);
   color: #fff;
+  border: 1px solid var(--blue);
 }
 
 .button-primary:hover {
   background: #0873bb;
+  border-color: #0873bb;
   transform: translateY(-2px);
 }
 
