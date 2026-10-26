@@ -100,3 +100,21 @@ footer{background:#061426;color:#fff}
 @media(max-width:850px){.desktop-nav,.nav-cta{display:none}.mobile-menu{display:block;position:relative}.mobile-menu summary{color:#fff;cursor:pointer;list-style:none;font-size:14px}.mobile-menu summary::-webkit-details-marker{display:none}.mobile-menu nav{position:absolute;right:0;top:40px;min-width:220px;background:#102740;color:#fff;border:1px solid #426482;border-radius:7px;padding:20px;display:flex;flex-direction:column;gap:18px;box-shadow:0 14px 30px #0007}.hero-grid,.development-grid,.about-grid{grid-template-columns:1fr}.hero-grid{padding-block:70px;min-height:auto}.hero-media{max-width:650px}.cards,.podcast-grid{grid-template-columns:1fr 1fr}.technology-showcase{grid-template-columns:1fr}.showcase-image img{max-height:430px;min-height:0}.podcast-heading{flex-direction:column;align-items:start}.podcast-network-mark{width:170px}}
 @media(max-width:580px){.nav{min-height:73px}.brand{font-size:17px}.brand img{width:43px;height:43px}.hero-grid{padding-block:60px}.hero h1{font-size:clamp(38px,10vw,50px);letter-spacing:-1.8px}.hero-description{font-size:14px}.hero-actions{flex-direction:column}.hero-actions a{width:100%}.hero-media-caption{font-size:9px}.strip-inner{padding:20px 0;gap:11px}.strip-inner span{font-size:9px}.strip-dot{display:none}.section{padding:76px 0}.cards,.podcast-grid{grid-template-columns:1fr}.showcase-copy{padding:28px}.feature-card{min-height:0}.status-panel{padding:21px}.status-line{flex-direction:column;gap:5px}.status-line dd{text-align:left}.footer-top,.footer-bottom{flex-direction:column;align-items:flex-start;gap:20px}}
 @media(prefers-reduced-motion:reduce){.feature-card{transition:none}}
+
+/* Podcast embeds and full interview — October 2026 */
+.podcast-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.podcast-card>img{max-height:240px;object-fit:cover}
+.spotify-frame{margin:16px 0 17px;overflow:hidden;border-radius:12px;background:#edf3f8}
+.spotify-frame iframe{display:block;width:100%;min-height:152px}
+.interview-feature{display:grid;grid-template-columns:1.1fr 1fr;gap:0;overflow:hidden;margin-top:36px;background:#fff;border:1px solid #dbe6f1;border-radius:14px;box-shadow:0 12px 30px #0714260a}
+.interview-cover{background:#102740}
+.interview-cover img{display:block;width:100%;height:100%;min-height:300px;object-fit:cover}
+.interview-details{padding:38px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.interview-details h3{font-size:clamp(24px,2.5vw,32px);line-height:1.18;color:#0b223a;margin:0}
+.interview-details p:not(.eyebrow){font-size:14px;line-height:1.8;color:#536b81;margin:0}
+.interview-details .interview-pending{padding:13px 16px;border-left:3px solid #138de0;background:#f1f7fc}
+.interview-embed{position:relative;aspect-ratio:16/9;margin-top:10px}
+.interview-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:850px){.interview-feature{grid-template-columns:1fr}.interview-cover img{max-height:440px;min-height:0}.interview-details{padding:28px}}
+@media(max-width:580px){.podcast-grid{grid-template-columns:1fr}}
+.podcasts .eyebrow{color:#1179ba}

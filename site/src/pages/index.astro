@@ -4,11 +4,20 @@ import '../styles/home.css';
 
 const title = 'AC-130 Viper | Medical Cooling Technology in Development';
 const description = 'Explore the AC-130 Viper, a localized CO₂ cooling technology platform under development by New York Cryogen, Inc.';
+// Verified episode IDs provided by the site owner. Episode names should be
+// reviewed against Spotify before publication.
 const podcasts = [
-  { image: '/podcast/gregory-my-fit-tribe.png', alt: 'Gregory Papageorge interview artwork from My Fit Tribe podcast', title: 'From Conversation to Inspiration', subtitle: 'Gregory Papageorge · My Fit Tribe' },
-  { image: '/podcast/gregory-global-1.png', alt: 'Global Podcast Network interview artwork featuring Gregory Papageorge', title: 'Interview with Gregory Papageorge', subtitle: 'Global Podcast Network' },
-  { image: '/podcast/gregory-global-2.png', alt: 'Additional Global Podcast Network interview artwork', title: 'More conversations', subtitle: 'Global Podcast Network' }
+  { id: '1Akb2MQvSbepkOrrXtOMjJ', image: '/podcast/gregory-my-fit-tribe.png', alt: 'My Fit Tribe podcast artwork featuring Gregory Papageorge', name: 'Podcast conversation 01' },
+  { id: '1PzArAbe4lZpLGmTTCJsci', image: '/podcast/gregory-global-1.png', alt: 'Global Podcast Network interview artwork', name: 'Podcast conversation 02' },
+  { id: '2Y2YXNsJALZcizPfI8VLjQ', image: '/podcast/gregory-global-2.png', alt: 'Global Podcast Network interview artwork', name: 'Podcast conversation 03' },
+  { id: '0XWxZazmlzFCqzYfTK4LN9', image: '/podcast/gregory-global-3.png', alt: 'Global Podcast Network interview artwork', name: 'Podcast conversation 04' }
 ];
+
+// When the video has been uploaded to an approved video host (for example,
+// YouTube or Cloudflare Stream), set its embed URL here. Do not commit the
+// original 127 MB MP4 to GitHub; GitHub rejects files larger than 100 MiB.
+const interviewVideoEmbedUrl = '';
+
 ---
 <!doctype html>
 <html lang="en">
@@ -89,11 +98,58 @@ const podcasts = [
 
     <section id="podcasts" class="section podcasts" aria-labelledby="podcasts-title">
       <div class="container">
-        <div class="podcast-heading"><div><p class="eyebrow">04 / IN CONVERSATION</p><h2 id="podcasts-title">The story behind <span>the innovation.</span></h2><p>Hear company founder Gregory Papageorge discuss his journey, motivation and perspective in podcast conversations.</p></div><img class="podcast-network-mark" src="/podcast/global-podcast.png" alt="Global Podcast Network" width="581" height="336" loading="lazy" /></div>
-        <div class="podcast-grid">
-          {podcasts.map((episode) => <article class="podcast-card"><img src={episode.image} alt={episode.alt} width="581" height="336" loading="lazy" decoding="async" /><div class="podcast-card-content"><p class="podcast-kicker">FEATURED CONVERSATION</p><h3>{episode.title}</h3><p>{episode.subtitle}</p><a href="https://ac130viper.com/" target="_blank" rel="noopener noreferrer" aria-label={`Find ${episode.title} on the original AC-130 Viper website`}>Find episode on original site <span aria-hidden="true">↗</span></a></div></article>)}
+        <div class="podcast-heading">
+          <div>
+            <p class="eyebrow">04 / PODCASTS & INTERVIEWS</p>
+            <h2 id="podcasts-title">Conversations behind <span>the innovation.</span></h2>
+            <p>Listen to interviews and conversations featuring New York Cryogen founder Gregory Papageorge. Select an episode to play it through Spotify.</p>
+          </div>
+          <img class="podcast-network-mark" src="/podcast/global-podcast.png" alt="Global Podcast Network" width="581" height="336" loading="lazy" decoding="async" />
         </div>
-        <p class="podcast-disclaimer">Podcast conversations reflect the speakers' views and may discuss concepts or experiences; they do not establish regulatory clearance or clinical efficacy. Individual streaming links will be added after verification.</p>
+
+        <div class="podcast-grid">
+          {podcasts.map((episode, index) => (
+            <article class="podcast-card">
+              <img src={episode.image} alt={episode.alt} width="581" height="336" loading="lazy" decoding="async" />
+              <div class="podcast-card-content">
+                <p class="podcast-kicker">EPISODE {String(index + 1).padStart(2, '0')}</p>
+                <h3>{episode.name}</h3>
+                <div class="spotify-frame">
+                  <iframe
+                    title={`Spotify player — ${episode.name}`}
+                    src={`https://open.spotify.com/embed/episode/${episode.id}?utm_source=generator&theme=0`}
+                    width="100%"
+                    height="152"
+                    loading="lazy"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    style="border:0;"
+                  ></iframe>
+                </div>
+                <a href={`https://open.spotify.com/episode/${episode.id}`} target="_blank" rel="noopener noreferrer">Open episode on Spotify <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div class="interview-feature">
+          <div class="interview-cover">
+            <img src="/podcast/gregory-interview-poster.jpg" alt="Still image from Gregory Papageorge's New York Cryogen video interview" width="960" height="540" loading="lazy" decoding="async" />
+          </div>
+          <div class="interview-details">
+            <p class="eyebrow">VIDEO INTERVIEW</p>
+            <h3>Gregory Papageorge — New York Cryogen</h3>
+            <p>A full-length interview discussing the company and the development journey behind its technology.</p>
+            {interviewVideoEmbedUrl ? (
+              <div class="interview-embed">
+                <iframe title="Gregory Papageorge video interview" src={interviewVideoEmbedUrl} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            ) : (
+              <p class="interview-pending">Video playback will be available after the original interview has been uploaded to a video host.</p>
+            )}
+          </div>
+        </div>
+
+        <p class="podcast-disclaimer">Interviews reflect the speakers' views. Discussions of a device or potential applications do not establish regulatory authorization, safety, or clinical effectiveness.</p>
       </div>
     </section>
 
