@@ -101,10 +101,14 @@ footer{background:#061426;color:#fff}
 @media(max-width:580px){.nav{min-height:73px}.brand{font-size:17px}.brand img{width:43px;height:43px}.hero-grid{padding-block:60px}.hero h1{font-size:clamp(38px,10vw,50px);letter-spacing:-1.8px}.hero-description{font-size:14px}.hero-actions{flex-direction:column}.hero-actions a{width:100%}.hero-media-caption{font-size:9px}.strip-inner{padding:20px 0;gap:11px}.strip-inner span{font-size:9px}.strip-dot{display:none}.section{padding:76px 0}.cards,.podcast-grid{grid-template-columns:1fr}.showcase-copy{padding:28px}.feature-card{min-height:0}.status-panel{padding:21px}.status-line{flex-direction:column;gap:5px}.status-line dd{text-align:left}.footer-top,.footer-bottom{flex-direction:column;align-items:flex-start;gap:20px}}
 @media(prefers-reduced-motion:reduce){.feature-card{transition:none}}
 
-/* Podcast embeds and full interview — October 2026 */
-.podcast-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.podcast-card>img{max-height:240px;object-fit:cover}
-.spotify-frame{margin:16px 0 17px;overflow:hidden;border-radius:12px;background:#edf3f8}
+/* Compact podcast cards: four across desktop, two tablet, one mobile */
+.podcast-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.podcast-card{min-width:0}
+.podcast-card-content{padding:16px}
+.podcast-kicker{margin:0 0 10px;font-size:10px}
+.podcast-card-content>a{font-size:11px;line-height:1.5}
+.podcast-card h3{display:none}
+.spotify-frame{margin:0 0 12px;overflow:hidden;border-radius:12px;background:#edf3f8}
 .spotify-frame iframe{display:block;width:100%;min-height:152px}
 .interview-feature{display:grid;grid-template-columns:1.1fr 1fr;gap:0;overflow:hidden;margin-top:36px;background:#fff;border:1px solid #dbe6f1;border-radius:14px;box-shadow:0 12px 30px #0714260a}
 .interview-cover{background:#102740}
@@ -118,3 +122,7 @@ footer{background:#061426;color:#fff}
 @media(max-width:850px){.interview-feature{grid-template-columns:1fr}.interview-cover img{max-height:440px;min-height:0}.interview-details{padding:28px}}
 @media(max-width:580px){.podcast-grid{grid-template-columns:1fr}}
 .podcasts .eyebrow{color:#1179ba}
+
+/* Breakpoints must come after the desktop podcast-grid rule */
+@media(max-width:1100px){.podcast-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.podcast-grid{grid-template-columns:1fr}}

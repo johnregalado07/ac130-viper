@@ -110,10 +110,8 @@ const interviewVideoEmbedUrl = '';
         <div class="podcast-grid">
           {podcasts.map((episode, index) => (
             <article class="podcast-card">
-              <img src={episode.image} alt={episode.alt} width="581" height="336" loading="lazy" decoding="async" />
               <div class="podcast-card-content">
                 <p class="podcast-kicker">EPISODE {String(index + 1).padStart(2, '0')}</p>
-                <h3>{episode.name}</h3>
                 <div class="spotify-frame">
                   <iframe
                     title={`Spotify player — ${episode.name}`}
