@@ -1,17 +1,20 @@
+
+/* AC-130 VIPER — GLOBAL DESIGN SYSTEM */
+
 :root {
-  --navy: #071426;
-  --navy-dark: #050e1b;
-  --navy-light: #0b2036;
-  --blue: #138de0;
-  --cyan: #4fc6ff;
-  --white: #f5f9ff;
-  --page-white: #ffffff;
-  --soft-bg: #f4f8fc;
-  --soft-bg-2: #edf4fa;
-  --ink: #0b1f33;
-  --ink-soft: #5a6f85;
-  --border: #d8e3ef;
-  --border-dark: #29415b;
+  --navy: #061426;
+  --navy-dark: #040e1b;
+  --navy-mid: #0d2b47;
+  --navy-soft: #102c46;
+  --brand-blue: #138de0;
+  --cyan: #48c7f9;
+  --white: #ffffff;
+  --light: #f1f7fc;
+  --ink: #0b223a;
+  --ink-muted: #536b81;
+  --dark-muted: #b3c9db;
+  --border-light: #dce6f0;
+  --border-dark: #25445f;
 }
 
 * {
@@ -24,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--page-white);
+  background: var(--white);
   color: var(--ink);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,12 +40,12 @@ a {
 
 a:focus-visible,
 summary:focus-visible {
-  outline: 3px solid var(--cyan);
+  outline: 3px solid var(--brand-blue);
   outline-offset: 4px;
 }
 
 ::selection {
-  background: #147fb9;
+  background: var(--brand-blue);
   color: #fff;
 }
 
@@ -59,6 +62,12 @@ p {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
 h2 {
   font-size: clamp(32px, 4vw, 49px);
   letter-spacing: -1.5px;
@@ -67,44 +76,45 @@ h2 {
 }
 
 h2 span {
-  color: var(--blue);
+  color: var(--brand-blue);
 }
 
 .button-primary,
 .button-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 18px;
   border-radius: 5px;
   padding: 17px 22px;
   font-size: 13px;
   font-weight: 750;
+  line-height: 1.4;
   transition:
-    transform 0.2s,
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+    transform .2s ease,
+    background .2s ease,
+    border-color .2s ease;
 }
 
 .button-primary {
-  background: var(--blue);
-  color: #fff;
-  border: 1px solid var(--blue);
+  background: var(--brand-blue);
+  border: 1px solid var(--brand-blue);
+  color: white;
 }
 
 .button-primary:hover {
-  background: #0873bb;
-  border-color: #0873bb;
+  background: #076eb4;
+  border-color: #076eb4;
   transform: translateY(-2px);
 }
 
 .button-secondary {
-  border: 1px solid #436079;
+  border: 1px solid #617e98;
   color: #e7f3ff;
 }
 
 .button-secondary:hover {
-  background: #17334d;
+  background: #173d5c;
 }
 
 @media (max-width: 560px) {
@@ -114,7 +124,6 @@ h2 span {
 
   .button-primary,
   .button-secondary {
-    justify-content: center;
     width: 100%;
   }
 
@@ -128,8 +137,10 @@ h2 span {
     scroll-behavior: auto;
   }
 
-  .button-primary,
-  .button-secondary {
-    transition: none;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
