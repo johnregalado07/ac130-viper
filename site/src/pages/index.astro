@@ -1,55 +1,14 @@
 ---
-import '../styles/global.css';
-import '../styles/home.css';
-
-const title = 'AC-130 Viper | Medical Cooling Technology in Development';
-const description = 'Explore the AC-130 Viper, a localized CO₂ cooling technology platform under development by New York Cryogen, Inc.';
-// Verified episode IDs provided by the site owner. Episode names should be
-// reviewed against Spotify before publication.
+import BaseLayout from '../layouts/BaseLayout.astro';
 const podcasts = [
-  { id: '1Akb2MQvSbepkOrrXtOMjJ', image: '/podcast/gregory-my-fit-tribe.png', alt: 'My Fit Tribe podcast artwork featuring Gregory Papageorge', name: 'Podcast conversation 01' },
-  { id: '1PzArAbe4lZpLGmTTCJsci', image: '/podcast/gregory-global-1.png', alt: 'Global Podcast Network interview artwork', name: 'Podcast conversation 02' },
-  { id: '2Y2YXNsJALZcizPfI8VLjQ', image: '/podcast/gregory-global-2.png', alt: 'Global Podcast Network interview artwork', name: 'Podcast conversation 03' },
-  { id: '0XWxZazmlzFCqzYfTK4LN9', image: '/podcast/gregory-global-3.png', alt: 'Global Podcast Network interview artwork', name: 'Podcast conversation 04' }
+  { id: '1Akb2MQvSbepkOrrXtOMjJ', name: 'Podcast episode 1' },
+  { id: '1PzArAbe4lZpLGmTTCJsci', name: 'Podcast episode 2' },
+  { id: '2Y2YXNsJALZcizPfI8VLjQ', name: 'Podcast episode 3' },
+  { id: '0XWxZazmlzFCqzYfTK4LN9', name: 'Podcast episode 4' }
 ];
-
-// When the video has been uploaded to an approved video host (for example,
-// YouTube or Cloudflare Stream), set its embed URL here. Do not commit the
-// original 127 MB MP4 to GitHub; GitHub rejects files larger than 100 MiB.
 const interviewVideoEmbedUrl = '';
-
 ---
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content={description} />
-  <meta name="robots" content="noindex, follow" />
-  <meta name="theme-color" content="#061426" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <title>{title}</title>
-</head>
-<body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="/" aria-label="AC-130 Viper home">
-        <img src="/images/viper-logo.png" width="54" height="54" alt="" decoding="async" />
-        <span>AC-130 <strong>VIPER</strong></span>
-      </a>
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#technology">Technology</a><a href="#development">Development</a><a href="#about">About</a><a href="#podcasts">Podcasts</a><a href="#contact">Contact</a>
-      </nav>
-      <a class="nav-cta" href="#contact">Get Updates <span aria-hidden="true">↗</span></a>
-      <details class="mobile-menu">
-        <summary aria-label="Toggle menu">Menu <span aria-hidden="true">☰</span></summary>
-        <nav aria-label="Mobile navigation"><a href="#technology">Technology</a><a href="#development">Development</a><a href="#about">About</a><a href="#podcasts">Podcasts</a><a href="#contact">Contact</a></nav>
-      </details>
-    </div>
-  </header>
-
+<BaseLayout title="AC-130 Viper | Product Development by New York Cryogen" description="Learn about the AC-130 Viper localized CO₂ cooling platform under development, its engineering program and company updates.">
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
@@ -58,8 +17,8 @@ const interviewVideoEmbedUrl = '';
           <h1 id="hero-title">Precision Engineered.<span>Driven by Innovation.</span></h1>
           <p class="hero-description">Meet the AC-130 Viper, a localized CO₂ cooling technology platform under development by New York Cryogen, Inc.</p>
           <div class="hero-actions">
-            <a class="button-primary" href="#technology">Explore the Technology <span aria-hidden="true">↗</span></a>
-            <a class="button-secondary" href="#development">Development Status <span aria-hidden="true">→</span></a>
+            <a class="button-primary" href="/technology/">Explore the Technology <span aria-hidden="true">↗</span></a>
+            <a class="button-secondary" href="/research-development/">Development Status <span aria-hidden="true">→</span></a>
           </div>
           <p class="hero-note"><span aria-hidden="true">ⓘ</span> The AC-130 Viper is under development and is not available for commercial distribution in the United States.</p>
         </div>
@@ -77,7 +36,7 @@ const interviewVideoEmbedUrl = '';
         <div class="section-heading"><p class="eyebrow">01 / THE TECHNOLOGY</p><h2 id="technology-title">A closer look at the <span>AC-130 Viper.</span></h2><p>Developed around localized CO₂ cooling, the AC-130 Viper combines mechanical design, an applicator and a monitoring interface. The product's final features and specifications remain subject to development and review.</p></div>
         <div class="technology-showcase">
           <div class="showcase-image"><img src="/images/ny-cryogen-studio.jpg" alt="New York Cryogen branding and product-development equipment" width="1920" height="1080" loading="lazy" decoding="async" /></div>
-          <div class="showcase-copy"><p class="eyebrow">SYSTEM DESIGN</p><h3>Technology developed with purpose.</h3><p>The development program includes engineering evaluations, product testing, quality preparation and regulatory work.</p><a class="text-link" href="#development">See development status <span aria-hidden="true">↗</span></a></div>
+          <div class="showcase-copy"><p class="eyebrow">SYSTEM DESIGN</p><h3>Technology developed with purpose.</h3><p>The development program includes engineering evaluations, product testing, quality preparation and regulatory work.</p><a class="text-link" href="/research-development/">See development status <span aria-hidden="true">↗</span></a></div>
         </div>
         <div class="cards">
           <article class="feature-card"><span class="feature-number">01</span><span class="feature-symbol" aria-hidden="true">◎</span><h3>Localized Cooling</h3><p>A development platform exploring controlled CO₂ cooling within a localized application area.</p></article>
@@ -89,7 +48,7 @@ const interviewVideoEmbedUrl = '';
 
     <section id="development" class="section development" aria-labelledby="development-title">
       <div class="container development-grid">
-        <div><p class="eyebrow">02 / DEVELOPMENT STATUS</p><h2 id="development-title">Engineering today.<span>Preparing for what comes next.</span></h2><p>New York Cryogen, Inc. continues development of the AC-130 Viper. Specifications, intended use, labeling and availability may change and are subject to applicable regulatory review.</p><a class="text-link" href="#contact">Contact the team <span aria-hidden="true">↗</span></a></div>
+        <div><p class="eyebrow">02 / DEVELOPMENT STATUS</p><h2 id="development-title">Engineering today.<span>Preparing for what comes next.</span></h2><p>New York Cryogen, Inc. continues development of the AC-130 Viper. Specifications, intended use, labeling and availability may change and are subject to applicable regulatory review.</p><a class="text-link" href="/contact/">Contact the team <span aria-hidden="true">↗</span></a></div>
         <div class="status-panel"><div class="panel-heading"><span>PRODUCT INFORMATION</span><span class="panel-indicator">● IN DEVELOPMENT</span></div><dl class="panel-content"><div class="status-line"><dt>Platform</dt><dd>Localized CO₂ Cooling</dd></div><div class="status-line"><dt>Developer</dt><dd>New York Cryogen, Inc.</dd></div><div class="status-line"><dt>Development status</dt><dd>Ongoing</dd></div><div class="status-line"><dt>US commercial distribution</dt><dd>Not available</dd></div></dl><p class="panel-footnote">For informational purposes only; this is not an offer to purchase a device or obtain treatment.</p></div>
       </div>
     </section>
@@ -153,7 +112,4 @@ const interviewVideoEmbedUrl = '';
 
     <section id="contact" class="section contact" aria-labelledby="contact-title"><div class="container contact-content"><p class="eyebrow">05 / STAY CONNECTED</p><h2 id="contact-title">Follow the future of <span>AC-130 Viper.</span></h2><p>For company, business, media and general product-development inquiries, contact New York Cryogen.</p><a class="button-primary" href="mailto:bill@nycryogen.com?subject=AC-130%20Viper%20Development%20Inquiry">Contact Our Team <span aria-hidden="true">↗</span></a><small>Do not send medical records or other sensitive health information. Inquiries do not reserve a product or schedule treatment.</small></div></section>
   </main>
-
-  <footer><div class="container footer-top"><a class="brand" href="/" aria-label="AC-130 Viper home"><img src="/images/viper-logo.png" alt="" width="54" height="54" loading="lazy"/><span>AC-130 <strong>VIPER</strong></span></a><span>Product development by New York Cryogen, Inc.</span></div><div class="container footer-bottom"><p>© {new Date().getFullYear()} New York Cryogen, Inc. All rights reserved.</p><p>AC-130 Viper is under development and not available for commercial distribution in the United States.</p></div></footer>
-</body>
-</html>
+</BaseLayout>

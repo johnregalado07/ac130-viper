@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+import '../styles/home.css';
+import '../styles/pages.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+// Preview environment: keep noindex until approved production launch.
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#061426" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="noindex, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <Header />
+  <div id="main-content"><slot /></div>
+  <Footer />
+</body>
+</html>

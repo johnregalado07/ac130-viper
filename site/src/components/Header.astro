@@ -1,0 +1,31 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/technology/', label: 'Technology' },
+  { href: '/research-development/', label: 'R&D' },
+  { href: '/about/', label: 'About' },
+  { href: '/medical-professionals/', label: 'Professionals' },
+  { href: '/media/', label: 'Media' },
+  { href: '/faq/', label: 'FAQs' }
+];
+const pathname = Astro.url.pathname;
+---
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="AC-130 Viper homepage">
+      <img src="/images/viper-logo.png" alt="" width="54" height="54" decoding="async" />
+      <span>AC-130 <strong>VIPER</strong></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {links.map(link => <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</a>)}
+    </nav>
+    <a class="nav-cta" href="/contact/">Contact <span aria-hidden="true">↗</span></a>
+    <details class="mobile-menu">
+      <summary>Menu <span aria-hidden="true">☰</span></summary>
+      <nav aria-label="Mobile navigation">
+        {links.map(link => <a href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>{link.label}</a>)}
+        <a href="/contact/">Contact</a>
+      </nav>
+    </details>
+  </div>
+</header>

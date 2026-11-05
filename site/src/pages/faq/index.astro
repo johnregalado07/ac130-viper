@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const faqs = [
+ {q:'What is the AC-130 Viper?',a:'It is a localized CO₂ cooling device under development by New York Cryogen, Inc.'},
+ {q:'Is the AC-130 Viper commercially available in the United States?',a:'No. It is not available for commercial distribution in the United States.'},
+ {q:'Are product specifications final?',a:'No. Design, configuration, labeling and public technical specifications may change.'},
+ {q:'What is the current FDA status?',a:'The existing company website describes a pending FDA 510(k) clearance process. This requires confirmation from the company before a definitive current filing or clearance status is published.'},
+ {q:'Can I order a device or schedule treatment?',a:'No. This website does not accept orders or product reservations and does not arrange treatment using the AC-130 Viper.'},
+ {q:'How do I contact New York Cryogen?',a:'Visit the Contact page for general company, product-development and media inquiries.'}
+];
+---
+<BaseLayout title="Frequently Asked Questions | AC-130 Viper" description="Frequently asked questions about AC-130 Viper development, availability and product information."><main><section class="sub-hero"><div class="container"><p class="eyebrow">06 / FAQs</p><h1>Frequently asked questions.</h1><p>General information about the development program and US availability.</p></div></section><section class="content-section"><div class="container prose-narrow">{faqs.map(item => <details class="faq-item"><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section><section class="sub-cta"><div class="container"><h2>More questions?</h2><a class="button-primary" href="/contact/">Contact us ↗</a></div></section></main></BaseLayout>
