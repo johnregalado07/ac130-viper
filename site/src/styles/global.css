@@ -1,23 +1,35 @@
 
-/* AC-130 VIPER — GLOBAL DESIGN SYSTEM */
+/* ==========================================
+   AC-130 VIPER
+   GLOBAL DESIGN SYSTEM
+   ========================================== */
 
 :root {
   --navy: #061426;
   --navy-dark: #040e1b;
   --navy-mid: #0d2b47;
   --navy-soft: #102c46;
+
   --brand-blue: #138de0;
   --cyan: #48c7f9;
+
   --white: #ffffff;
   --light: #f1f7fc;
+
   --ink: #0b223a;
   --ink-muted: #536b81;
+
   --dark-muted: #b3c9db;
+
   --border-light: #dce6f0;
   --border-dark: #25445f;
 }
 
-* {
+/* RESET */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -33,12 +45,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
 a:focus-visible,
+button:focus-visible,
 summary:focus-visible {
   outline: 3px solid var(--brand-blue);
   outline-offset: 4px;
@@ -46,25 +65,31 @@ summary:focus-visible {
 
 ::selection {
   background: var(--brand-blue);
-  color: #fff;
+  color: #ffffff;
 }
 
+/* LAYOUT */
+
 .container {
-  max-width: 1320px;
+  max-width: 1240px;
   width: calc(100% - 48px);
   margin-inline: auto;
 }
 
+/* TYPOGRAPHY */
+
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   overflow-wrap: break-word;
 }
 
@@ -79,27 +104,32 @@ h2 span {
   color: var(--brand-blue);
 }
 
+/* BUTTONS */
+
 .button-primary,
 .button-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
+
   border-radius: 5px;
   padding: 17px 22px;
+
   font-size: 13px;
   font-weight: 750;
   line-height: 1.4;
+
   transition:
-    transform .2s ease,
-    background .2s ease,
-    border-color .2s ease;
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .button-primary {
   background: var(--brand-blue);
   border: 1px solid var(--brand-blue);
-  color: white;
+  color: #ffffff;
 }
 
 .button-primary:hover {
@@ -117,6 +147,16 @@ h2 span {
   background: #173d5c;
 }
 
+/* TABLET */
+
+@media (max-width: 900px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+
+/* MOBILE */
+
 @media (max-width: 560px) {
   .container {
     width: calc(100% - 36px);
@@ -132,6 +172,8 @@ h2 span {
   }
 }
 
+/* ACCESSIBILITY */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -140,7 +182,7 @@ h2 span {
   *,
   *::before,
   *::after {
-    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
