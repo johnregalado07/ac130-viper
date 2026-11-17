@@ -1,34 +1,703 @@
+
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/technology.css';
+
+const pageTitle =
+  'AC-130 Viper Technology Overview | New York Cryogen';
+
+const pageDescription =
+  'Explore the AC-130 Viper localized CO₂ cooling platform under development by New York Cryogen, including system design, engineering components and development status.';
+
+const engineeringFeatures = [
+  {
+    number: '01',
+    icon: '◎',
+    title: 'Localized CO₂ Cooling',
+    description:
+      'The development platform explores the use of carbon dioxide for cooling within a defined application area. Final operating parameters remain subject to evaluation.'
+  },
+  {
+    number: '02',
+    icon: '⌁',
+    title: 'Applicator Design',
+    description:
+      'Engineering work includes the handheld applicator, mechanical configuration, nozzle concepts and product ergonomics.'
+  },
+  {
+    number: '03',
+    icon: '◈',
+    title: 'Monitoring Interface',
+    description:
+      'The product concept includes a display and monitoring interface. Its final functions and measurement capabilities have not been established for public specifications.'
+  },
+  {
+    number: '04',
+    icon: '◇',
+    title: 'System Integration',
+    description:
+      'Development includes how the cooling supply, mechanical components, controls and interface operate together as a system.'
+  },
+  {
+    number: '05',
+    icon: '⊕',
+    title: 'Temperature Monitoring',
+    description:
+      'Temperature-monitoring concepts form part of the engineering program. Sensor performance and final system capabilities remain under review.'
+  },
+  {
+    number: '06',
+    icon: '▣',
+    title: 'Mechanical Engineering',
+    description:
+      'The development program considers material selection, equipment configuration, reliability and manufacturability.'
+  }
+];
+
+const developmentSteps = [
+  {
+    number: '01',
+    title: 'Concept & Design',
+    description:
+      'Define engineering requirements, product concepts and the proposed system architecture.'
+  },
+  {
+    number: '02',
+    title: 'Prototype Development',
+    description:
+      'Develop and refine mechanical components, the applicator and system integration.'
+  },
+  {
+    number: '03',
+    title: 'Testing & Evaluation',
+    description:
+      'Evaluate relevant engineering requirements and document findings throughout development.'
+  },
+  {
+    number: '04',
+    title: 'Quality & Regulatory Work',
+    description:
+      'Continue applicable quality preparation, documentation and regulatory activities before any potential commercial availability.'
+  }
+];
+
+const gallery = [
+  {
+    image: '/images/viper-device.png',
+    alt: 'AC-130 Viper development device with monitoring screen and applicator',
+    title: 'AC-130 Viper System',
+    description: 'Development equipment and interface'
+  },
+  {
+    image: '/images/device-demonstration.jpg',
+    alt: 'Equipment demonstration associated with New York Cryogen',
+    title: 'Equipment Demonstration',
+    description: 'Development-related photography'
+  },
+  {
+    image: '/images/ny-cryogen-studio.jpg',
+    alt: 'New York Cryogen company branding and development equipment',
+    title: 'New York Cryogen',
+    description: 'Company and engineering environment'
+  }
+];
 ---
-<BaseLayout title="Technology Overview | AC-130 Viper" description="Explore the AC-130 Viper localized CO₂ cooling platform and its engineering development.">
-  <main>
-    <section class="sub-hero">
-      <div class="container">
-        <p class="eyebrow">01 / TECHNOLOGY</p>
-        <h1>Technology, designed with purpose.</h1>
-        <p>Explore the system components and engineering program behind the AC-130 Viper. The final design and capabilities are not yet established.</p>
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+>
+  <main class="technology-page">
+
+    <!-- HERO SECTION -->
+    <section
+      class="tech-hero"
+      aria-labelledby="tech-hero-title"
+    >
+      <div class="container tech-hero-grid">
+
+        <div class="tech-hero-content">
+
+          <p class="tech-eyebrow tech-eyebrow-light">
+            AC-130 VIPER / TECHNOLOGY OVERVIEW
+          </p>
+
+          <h1 id="tech-hero-title">
+            Precision cooling.
+            <span>Engineered for the future.</span>
+          </h1>
+
+          <p class="tech-hero-description">
+            Explore the AC-130 Viper, a localized
+            CO₂ cooling technology platform under
+            development by New York Cryogen, Inc.
+          </p>
+
+          <p class="tech-hero-description">
+            The program brings together cooling-system
+            concepts, mechanical design, an applicator
+            and a monitoring interface.
+          </p>
+
+          <div class="tech-hero-actions">
+
+            <a
+              href="#system-overview"
+              class="button-primary"
+            >
+              Explore the System
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="/research-development/"
+              class="tech-outline-button"
+            >
+              Development Status
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+          <div class="tech-hero-notice">
+
+            <span aria-hidden="true">ⓘ</span>
+
+            <p>
+              The AC-130 Viper is under development
+              and is not available for commercial
+              distribution in the United States.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="tech-hero-visual">
+
+          <div class="tech-hero-image">
+
+            <img
+              src="/images/viper-device.png"
+              alt="AC-130 Viper development device showing the monitor and handheld cooling applicator"
+              width="1000"
+              height="562"
+              fetchpriority="high"
+            />
+
+          </div>
+
+          <div class="tech-hero-caption">
+            <span>AC-130 VIPER</span>
+            <span>TECHNOLOGY IN DEVELOPMENT</span>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <section class="content-section"><div class="container split-layout">
-      <div><p class="eyebrow">DEVELOPMENT PLATFORM</p><h2>Localized CO₂ cooling technology</h2><p>The AC-130 Viper is a localized CO₂ cooling device being developed by New York Cryogen, Inc. Work includes the handheld applicator, control interface, cooling-delivery configuration and supporting system integration.</p><p>Any photographs show development-related equipment and should not be interpreted as final commercial specifications.</p></div>
-      <figure class="content-image"><img src="/images/viper-device.png" alt="AC-130 Viper development monitor and handheld applicator" width="1000" height="562" loading="lazy"/><figcaption>Product-development imagery; configuration may change.</figcaption></figure>
-    </div></section>
-    <section class="content-section light-section"><div class="container"><p class="eyebrow">ENGINEERING AREAS</p><h2>Technology under development</h2><div class="info-grid">
-      <article class="info-card"><h3>Applicator design</h3><p>Continued refinement of the handheld assembly and mechanical design.</p></article>
-      <article class="info-card"><h3>Cooling delivery</h3><p>Engineering work focused on localized CO₂ delivery system configuration.</p></article>
-      <article class="info-card"><h3>Monitoring interface</h3><p>Development of display and monitoring components; features are not final.</p></article>
-    </div></div></section>
-    <section class="content-section"><div class="container split-layout reverse"><figure class="content-image"><img src="/images/ny-cryogen-studio.jpg" alt="New York Cryogen workspace and technology development equipment" width="1920" height="1080" loading="lazy"/></figure><div><p class="eyebrow">IMPORTANT INFORMATION</p><h2>Specifications remain subject to review</h2><p>The website does not establish final settings, operating parameters, clinical performance, indications, contraindications, or safety claims. Such information will depend on final product development and applicable regulatory review.</p><a class="text-link" href="/research-development/">Read about development ↗</a></div></div></section>
 
-    <section class="sub-cta">
-      <div class="container">
-        <p class="eyebrow">STAY CONNECTED</p>
-        <h2>Follow the development of AC-130 Viper.</h2>
-        <p>For product-development, company, business or media inquiries, contact New York Cryogen.</p>
-        <a class="button-primary" href="/contact/">Contact New York Cryogen ↗</a>
+    <!-- TECHNOLOGY INFORMATION STRIP -->
+    <div class="tech-info-strip">
+
+      <div class="container tech-strip-inner">
+
+        <span>LOCALIZED CO₂ COOLING</span>
+        <span class="tech-strip-separator" aria-hidden="true">✦</span>
+
+        <span>MECHANICAL ENGINEERING</span>
+        <span class="tech-strip-separator" aria-hidden="true">✦</span>
+
+        <span>MONITORING INTERFACE</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- SYSTEM OVERVIEW -->
+    <section
+      id="system-overview"
+      class="tech-section tech-overview"
+      aria-labelledby="tech-overview-title"
+    >
+      <div class="container tech-overview-grid">
+
+        <div class="tech-section-copy">
+
+          <p class="tech-eyebrow">
+            01 / SYSTEM OVERVIEW
+          </p>
+
+          <h2 id="tech-overview-title">
+            Understanding
+            <span>the technology.</span>
+          </h2>
+
+          <p class="tech-lead">
+            The AC-130 Viper is being developed as
+            a localized carbon dioxide cooling platform.
+          </p>
+
+          <p>
+            Its engineering program includes a
+            cooling-system concept, a handheld
+            applicator, equipment controls and
+            a monitoring interface.
+          </p>
+
+          <p>
+            The company continues to evaluate the
+            product configuration, operating requirements
+            and supporting documentation.
+          </p>
+
+          <p>
+            Final specifications, intended use,
+            treatment parameters and product
+            performance information remain subject
+            to development and applicable review.
+          </p>
+
+          <a
+            href="/research-development/"
+            class="tech-text-link"
+          >
+            Learn About Research & Development
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+        <div class="tech-overview-image">
+
+          <img
+            src="/images/ny-cryogen-studio.jpg"
+            alt="New York Cryogen branding and technology development equipment"
+            width="1920"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <div class="tech-image-caption">
+            New York Cryogen — product development
+          </div>
+
+        </div>
+
       </div>
     </section>
+
+
+    <!-- ENGINEERING COMPONENTS -->
+    <section
+      class="tech-section tech-features"
+      aria-labelledby="tech-features-title"
+    >
+      <div class="container">
+
+        <div class="tech-section-heading">
+
+          <p class="tech-eyebrow">
+            02 / ENGINEERING COMPONENTS
+          </p>
+
+          <h2 id="tech-features-title">
+            Designed around
+            <span>integrated technology.</span>
+          </h2>
+
+          <p>
+            The following areas are part of the
+            AC-130 Viper development program.
+            These descriptions are not final
+            product specifications.
+          </p>
+
+        </div>
+
+
+        <div class="tech-features-grid">
+
+          {
+            engineeringFeatures.map((feature) => (
+
+              <article class="tech-feature-card">
+
+                <div class="tech-feature-top">
+
+                  <span class="tech-feature-number">
+                    {feature.number}
+                  </span>
+
+                  <span
+                    class="tech-feature-icon"
+                    aria-hidden="true"
+                  >
+                    {feature.icon}
+                  </span>
+
+                </div>
+
+                <h3>
+                  {feature.title}
+                </h3>
+
+                <p>
+                  {feature.description}
+                </p>
+
+              </article>
+
+            ))
+          }
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- APPLICATOR SECTION -->
+    <section
+      class="tech-section tech-applicator"
+      aria-labelledby="tech-applicator-title"
+    >
+      <div class="container tech-applicator-grid">
+
+        <div class="tech-applicator-image">
+
+          <img
+            src="/images/device-demonstration.jpg"
+            alt="Equipment demonstration showing a handheld device"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p>
+            Development-related equipment imagery.
+            It does not establish clinical safety
+            or effectiveness.
+          </p>
+
+        </div>
+
+        <div class="tech-section-copy">
+
+          <p class="tech-eyebrow">
+            03 / APPLICATOR & CONTROLS
+          </p>
+
+          <h2 id="tech-applicator-title">
+            Exploring the
+            <span>device architecture.</span>
+          </h2>
+
+          <p>
+            The AC-130 Viper development program
+            includes investigation of a handheld
+            applicator and supporting controls.
+          </p>
+
+          <p>
+            Key engineering considerations include
+            component design, integration,
+            handling and the relationship between
+            the applicator and the wider system.
+          </p>
+
+          <p>
+            Final nozzle configurations,
+            pressure ranges, temperature
+            capabilities and operational
+            instructions have not been
+            established for publication.
+          </p>
+
+          <a
+            href="/contact/"
+            class="tech-text-link"
+          >
+            Contact the Development Team
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DEVELOPMENT PROCESS -->
+    <section
+      class="tech-section tech-development"
+      aria-labelledby="tech-development-title"
+    >
+      <div class="container">
+
+        <div class="tech-section-heading tech-section-heading-dark">
+
+          <p class="tech-eyebrow tech-eyebrow-light">
+            04 / DEVELOPMENT PROCESS
+          </p>
+
+          <h2 id="tech-development-title">
+            Engineering today.
+            <span>Preparing for tomorrow.</span>
+          </h2>
+
+          <p>
+            Product development is an ongoing
+            process of design, evaluation,
+            refinement and documentation.
+          </p>
+
+        </div>
+
+
+        <div class="tech-development-grid">
+
+          {
+            developmentSteps.map((step) => (
+
+              <article class="tech-development-card">
+
+                <span class="tech-development-number">
+                  {step.number}
+                </span>
+
+                <h3>
+                  {step.title}
+                </h3>
+
+                <p>
+                  {step.description}
+                </p>
+
+              </article>
+
+            ))
+          }
+
+        </div>
+
+
+        <div class="tech-regulatory-panel">
+
+          <div class="tech-regulatory-icon" aria-hidden="true">
+            ⓘ
+          </div>
+
+          <div>
+
+            <h3>Development & Regulatory Status</h3>
+
+            <p>
+              The AC-130 Viper is under development
+              and is not available for commercial
+              distribution in the United States.
+              Final product specifications,
+              intended use, labeling and
+              availability remain subject
+              to applicable regulatory review
+              and may change.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- GALLERY -->
+    <section
+      class="tech-section tech-gallery"
+      aria-labelledby="tech-gallery-title"
+    >
+      <div class="container">
+
+        <div class="tech-section-heading">
+
+          <p class="tech-eyebrow">
+            05 / PRODUCT GALLERY
+          </p>
+
+          <h2 id="tech-gallery-title">
+            A closer look at
+            <span>AC-130 Viper.</span>
+          </h2>
+
+          <p>
+            Selected imagery of the
+            equipment and company
+            development environment.
+          </p>
+
+        </div>
+
+
+        <div class="tech-gallery-grid">
+
+          {
+            gallery.map((item) => (
+
+              <figure class="tech-gallery-item">
+
+                <div class="tech-gallery-image">
+
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    width="1000"
+                    height="650"
+                    loading="lazy"
+                    decoding="async"
+                  />
+
+                </div>
+
+                <figcaption>
+
+                  <h3>
+                    {item.title}
+                  </h3>
+
+                  <p>
+                    {item.description}
+                  </p>
+
+                </figcaption>
+
+              </figure>
+
+            ))
+          }
+
+        </div>
+
+
+        <p class="tech-gallery-note">
+          Images illustrate development-related
+          equipment and demonstrations.
+          They do not establish final product
+          specifications or clinical outcomes.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- FAQ PREVIEW -->
+    <section
+      class="tech-section tech-questions"
+      aria-labelledby="tech-questions-title"
+    >
+      <div class="container tech-questions-grid">
+
+        <div>
+
+          <p class="tech-eyebrow">
+            06 / PRODUCT INFORMATION
+          </p>
+
+          <h2 id="tech-questions-title">
+            Have questions
+            <span>about the AC-130 Viper?</span>
+          </h2>
+
+          <p>
+            Explore answers about product
+            development, availability and
+            information for medical professionals.
+          </p>
+
+        </div>
+
+        <div class="tech-questions-links">
+
+          <a href="/faq/">
+            <span>
+              <strong>Frequently Asked Questions</strong>
+              <small>Answers to common product inquiries</small>
+            </span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a href="/medical-professionals/">
+            <span>
+              <strong>Medical Professionals</strong>
+              <small>Development information for professionals</small>
+            </span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a href="/research-development/">
+            <span>
+              <strong>Research & Development</strong>
+              <small>Explore the engineering program</small>
+            </span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT / PRE-FOOTER -->
+    <section
+      class="tech-contact"
+      aria-labelledby="tech-contact-title"
+    >
+      <div class="container tech-contact-inner">
+
+        <p class="tech-eyebrow tech-eyebrow-light">
+          CONNECT WITH NEW YORK CRYOGEN
+        </p>
+
+        <h2 id="tech-contact-title">
+          Discover what's next for
+          <span>AC-130 Viper.</span>
+        </h2>
+
+        <p>
+          Contact New York Cryogen for
+          general technology, engineering,
+          media and product-development inquiries.
+        </p>
+
+        <div class="tech-contact-actions">
+
+          <a href="/contact/" class="button-primary">
+            Contact Our Team
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            href="/research-development/"
+            class="tech-outline-button"
+          >
+            Explore Development
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        <small>
+          Inquiries do not reserve a product
+          or schedule medical treatment.
+        </small>
+
+      </div>
+    </section>
+
   </main>
 </BaseLayout>
