@@ -1,25 +1,620 @@
+
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/medical.css';
+
+const professionalAreas = [
+  {
+    number: '01',
+    icon: '✚',
+    title: 'Healthcare Professionals',
+    description:
+      'Follow general product-development information, proposed technology concepts and company announcements. Final intended-use information is not yet available.'
+  },
+  {
+    number: '02',
+    icon: '⚙',
+    title: 'Engineering Specialists',
+    description:
+      'Explore the mechanical design, CO₂ cooling-system concept, applicator development and monitoring-interface work.'
+  },
+  {
+    number: '03',
+    icon: '▣',
+    title: 'Quality & Regulatory Professionals',
+    description:
+      'Learn about the company’s stated quality-preparation and regulatory activities as the product-development program progresses.'
+  },
+  {
+    number: '04',
+    icon: '◇',
+    title: 'Manufacturing & Industry Partners',
+    description:
+      'Connect with New York Cryogen for general company, engineering, manufacturing and business-development inquiries.'
+  }
+];
+
+const informationTopics = [
+  {
+    number: '01',
+    title: 'Technology Development',
+    description:
+      'The AC-130 Viper is a localized CO₂ cooling platform under development. Its final system configuration remains subject to review.'
+  },
+  {
+    number: '02',
+    title: 'Engineering Evaluation',
+    description:
+      'The company continues engineering and testing activities. Publicly confirmed performance data and final operating specifications have not been established.'
+  },
+  {
+    number: '03',
+    title: 'Regulatory Considerations',
+    description:
+      'Intended use, product labeling, applicable regulatory requirements and future availability remain subject to review.'
+  }
+];
+
+const questions = [
+  {
+    question: 'Is the AC-130 Viper available for clinical or commercial use?',
+    answer:
+      'No. New York Cryogen identifies the AC-130 Viper as under development and not available for commercial distribution in the United States.'
+  },
+  {
+    question: 'Are final clinical indications and treatment protocols available?',
+    answer:
+      'No final public indications, treatment protocols, contraindications or safety claims are provided while the product remains under development.'
+  },
+  {
+    question: 'Can medical professionals request product information?',
+    answer:
+      'Yes. Healthcare and other industry professionals can contact New York Cryogen for general company information and development updates.'
+  },
+  {
+    question: 'Can I reserve a device or request training?',
+    answer:
+      'This website does not accept product reservations, orders or clinical training registrations for the AC-130 Viper.'
+  }
+];
 ---
-<BaseLayout title="Medical Professionals | AC-130 Viper" description="Product-development information for medical and technical professionals following the AC-130 Viper program.">
-  <main>
-    <section class="sub-hero">
-      <div class="container">
-        <p class="eyebrow">04 / MEDICAL PROFESSIONALS</p>
-        <h1>Information for professionals.</h1>
-        <p>Nonpromotional updates for healthcare, engineering, manufacturing, quality and business professionals.</p>
+
+<BaseLayout
+  title="Medical Professionals | AC-130 Viper"
+  description="AC-130 Viper product-development information for healthcare, engineering, quality, regulatory and industry professionals."
+>
+  <main class="medical-page">
+
+    <!-- HERO -->
+    <section
+      class="mp-hero"
+      aria-labelledby="mp-hero-title"
+    >
+      <div class="container mp-hero-grid">
+
+        <div class="mp-hero-copy">
+
+          <p class="mp-eyebrow mp-eyebrow-light">
+            NEW YORK CRYOGEN / MEDICAL PROFESSIONALS
+          </p>
+
+          <h1 id="mp-hero-title">
+            Connecting innovation
+            <span>with professional insight.</span>
+          </h1>
+
+          <p class="mp-hero-description">
+            Discover general product-development information
+            about the AC-130 Viper, a localized CO₂ cooling
+            technology platform being developed by
+            New York Cryogen, Inc.
+          </p>
+
+          <p class="mp-hero-description">
+            We welcome inquiries from healthcare,
+            engineering, quality, regulatory,
+            manufacturing and business professionals.
+          </p>
+
+          <div class="mp-hero-actions">
+            <a href="#professional-overview" class="button-primary">
+              Explore Information
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a href="/contact/" class="mp-outline-button">
+              Contact the Team
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <p class="mp-hero-note">
+            <span aria-hidden="true">ⓘ</span>
+            The AC-130 Viper is under development and
+            is not available for commercial distribution
+            in the United States.
+          </p>
+
+        </div>
+
+        <div class="mp-hero-visual">
+
+          <div class="mp-hero-image">
+            <img
+              src="/images/viper-device.png"
+              alt="AC-130 Viper development equipment with monitoring display and handheld applicator"
+              width="1000"
+              height="562"
+              fetchpriority="high"
+            />
+          </div>
+
+          <div class="mp-image-label">
+            <span>AC-130 VIPER</span>
+            <span>DEVELOPMENT PLATFORM</span>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <section class="content-section"><div class="container prose-narrow"><h2>Professional inquiries</h2><p>New York Cryogen welcomes general professional inquiries about the AC-130 Viper development program. The device remains under development and is not available for commercial distribution in the United States.</p><p>This page does not offer clinical training, device purchasing, commercial-use commitments, treatment reservations or medical advice.</p><p>Future product information, labeling and intended uses will depend on completed development and applicable regulatory review.</p><a class="button-primary" href="/contact/">Send a business inquiry ↗</a></div></section>
 
-    <section class="sub-cta">
-      <div class="container">
-        <p class="eyebrow">STAY CONNECTED</p>
-        <h2>Follow the development of AC-130 Viper.</h2>
-        <p>For product-development, company, business or media inquiries, contact New York Cryogen.</p>
-        <a class="button-primary" href="/contact/">Contact New York Cryogen ↗</a>
+    <!-- INFORMATION STRIP -->
+    <div class="mp-strip">
+      <div class="container mp-strip-inner">
+        <span>HEALTHCARE</span>
+        <span aria-hidden="true">✦</span>
+        <span>ENGINEERING</span>
+        <span aria-hidden="true">✦</span>
+        <span>QUALITY & REGULATORY</span>
+        <span aria-hidden="true">✦</span>
+        <span>INDUSTRY PROFESSIONALS</span>
+      </div>
+    </div>
+
+
+    <!-- PROFESSIONAL OVERVIEW -->
+    <section
+      id="professional-overview"
+      class="mp-section mp-overview"
+      aria-labelledby="mp-overview-title"
+    >
+      <div class="container mp-two-column">
+
+        <div class="mp-content">
+
+          <p class="mp-eyebrow">
+            01 / PROFESSIONAL OVERVIEW
+          </p>
+
+          <h2 id="mp-overview-title">
+            Explore the
+            <span>development program.</span>
+          </h2>
+
+          <p class="mp-lead">
+            New York Cryogen is developing the
+            AC-130 Viper localized CO₂ cooling platform.
+          </p>
+
+          <p>
+            The program includes system engineering,
+            applicator design, testing, quality preparation
+            and activities associated with
+            applicable regulatory requirements.
+          </p>
+
+          <p>
+            This page provides general information
+            for professionals interested in following
+            the company's development activities.
+          </p>
+
+          <p>
+            The product's final specifications,
+            clinical indications, operating parameters
+            and availability remain subject to
+            development and review.
+          </p>
+
+          <a href="/technology/" class="mp-text-link">
+            Explore the Technology
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+        <div class="mp-photo">
+
+          <img
+            src="/images/ny-cryogen-studio.jpg"
+            alt="New York Cryogen product-development equipment and company branding"
+            width="1920"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p>
+            Company and product-development imagery
+          </p>
+
+        </div>
+
       </div>
     </section>
+
+
+    <!-- PROFESSIONAL INTERESTS -->
+    <section
+      class="mp-section mp-professionals"
+      aria-labelledby="mp-professionals-title"
+    >
+      <div class="container">
+
+        <div class="mp-section-heading">
+          <p class="mp-eyebrow">
+            02 / PROFESSIONAL INTERESTS
+          </p>
+
+          <h2 id="mp-professionals-title">
+            Information for
+            <span>industry professionals.</span>
+          </h2>
+
+          <p>
+            New York Cryogen welcomes general
+            inquiries from professionals interested
+            in different aspects of the
+            AC-130 Viper development program.
+          </p>
+        </div>
+
+        <div class="mp-professional-grid">
+          {
+            professionalAreas.map((area) => (
+              <article class="mp-professional-card">
+
+                <div class="mp-card-top">
+                  <span>{area.number}</span>
+                  <span class="mp-card-icon" aria-hidden="true">
+                    {area.icon}
+                  </span>
+                </div>
+
+                <h3>{area.title}</h3>
+                <p>{area.description}</p>
+
+              </article>
+            ))
+          }
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DEVELOPMENT INFORMATION -->
+    <section
+      class="mp-section mp-development"
+      aria-labelledby="mp-development-title"
+    >
+      <div class="container">
+
+        <div class="mp-section-heading mp-heading-dark">
+          <p class="mp-eyebrow mp-eyebrow-light">
+            03 / DEVELOPMENT INFORMATION
+          </p>
+
+          <h2 id="mp-development-title">
+            Engineering.
+            <span>Evaluation. Preparation.</span>
+          </h2>
+
+          <p>
+            The AC-130 Viper is a development-stage
+            technology platform. The following topics
+            describe the company's current
+            product-development focus.
+          </p>
+        </div>
+
+        <div class="mp-development-grid">
+          {
+            informationTopics.map((topic) => (
+              <article class="mp-development-card">
+
+                <span class="mp-development-number">
+                  {topic.number}
+                </span>
+
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+
+              </article>
+            ))
+          }
+        </div>
+
+        <div class="mp-development-notice">
+          <span aria-hidden="true">ⓘ</span>
+
+          <p>
+            Information presented here is nonpromotional
+            and relates to product development only.
+            It does not establish medical-device clearance,
+            clinical safety, effectiveness, or
+            commercial availability.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EQUIPMENT INFORMATION -->
+    <section
+      class="mp-section mp-equipment"
+      aria-labelledby="mp-equipment-title"
+    >
+      <div class="container mp-two-column">
+
+        <div class="mp-photo">
+
+          <img
+            src="/images/device-demonstration.jpg"
+            alt="Equipment demonstration related to the AC-130 Viper development program"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p>
+            Demonstration photograph.
+            Not evidence of clinical outcomes
+            or regulatory authorization.
+          </p>
+
+        </div>
+
+        <div class="mp-content">
+
+          <p class="mp-eyebrow">
+            04 / TECHNOLOGY INFORMATION
+          </p>
+
+          <h2 id="mp-equipment-title">
+            Learn about the
+            <span>AC-130 Viper system.</span>
+          </h2>
+
+          <p>
+            The development program explores
+            localized CO₂ cooling through
+            a device incorporating an applicator,
+            controls and a monitoring interface.
+          </p>
+
+          <p>
+            Product design and engineering
+            evaluations are ongoing.
+            Public performance specifications
+            and final operating instructions
+            have not been established.
+          </p>
+
+          <p>
+            Professionals seeking general
+            information can review the
+            Technology and Research & Development
+            sections of this website.
+          </p>
+
+          <div class="mp-inline-links">
+            <a href="/technology/" class="mp-text-link">
+              Technology Overview ↗
+            </a>
+
+            <a href="/research-development/" class="mp-text-link">
+              Research & Development ↗
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section
+      class="mp-section mp-faq"
+      aria-labelledby="mp-faq-title"
+    >
+      <div class="container">
+
+        <div class="mp-section-heading">
+          <p class="mp-eyebrow">
+            05 / PROFESSIONAL QUESTIONS
+          </p>
+
+          <h2 id="mp-faq-title">
+            What professionals
+            <span>should know.</span>
+          </h2>
+
+          <p>
+            General answers about the
+            development status and availability
+            of the AC-130 Viper.
+          </p>
+        </div>
+
+        <div class="mp-faq-list">
+          {
+            questions.map((item) => (
+              <details class="mp-faq-item">
+
+                <summary>
+                  <span>{item.question}</span>
+                  <span class="mp-faq-plus" aria-hidden="true">+</span>
+                </summary>
+
+                <div class="mp-faq-answer">
+                  <p>{item.answer}</p>
+                </div>
+
+              </details>
+            ))
+          }
+        </div>
+
+        <div class="mp-faq-link">
+          <a href="/faq/" class="mp-text-link">
+            View All Frequently Asked Questions
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- REGULATORY STATUS -->
+    <section
+      class="mp-section mp-status"
+      aria-labelledby="mp-status-title"
+    >
+      <div class="container mp-status-grid">
+
+        <div class="mp-content">
+
+          <p class="mp-eyebrow">
+            06 / PRODUCT STATUS
+          </p>
+
+          <h2 id="mp-status-title">
+            A development-stage
+            <span>technology platform.</span>
+          </h2>
+
+          <p>
+            New York Cryogen identifies the
+            AC-130 Viper as a product under
+            development.
+          </p>
+
+          <p>
+            The existing company website states
+            that FDA 510(k) clearance is pending.
+            The company should confirm the
+            current regulatory status before
+            public launch of this redesigned site.
+          </p>
+
+          <p>
+            This website does not accept
+            device purchases, reservations,
+            treatment bookings or
+            commercial-use commitments.
+          </p>
+
+        </div>
+
+        <div class="mp-status-panel">
+
+          <div class="mp-status-header">
+            <span>AC-130 VIPER</span>
+            <span class="mp-status-tag">
+              ● IN DEVELOPMENT
+            </span>
+          </div>
+
+          <dl>
+            <div>
+              <dt>Developer</dt>
+              <dd>New York Cryogen, Inc.</dd>
+            </div>
+
+            <div>
+              <dt>Technology</dt>
+              <dd>Localized CO₂ Cooling</dd>
+            </div>
+
+            <div>
+              <dt>Product stage</dt>
+              <dd>Under Development</dd>
+            </div>
+
+            <div>
+              <dt>US commercial distribution</dt>
+              <dd>Not Available</dd>
+            </div>
+          </dl>
+
+          <p class="mp-status-footnote">
+            Final specifications, intended use,
+            labeling and availability remain
+            subject to applicable review.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT CTA -->
+    <section
+      class="mp-contact"
+      aria-labelledby="mp-contact-title"
+    >
+      <div class="container mp-contact-inner">
+
+        <p class="mp-eyebrow mp-eyebrow-light">
+          CONNECT WITH NEW YORK CRYOGEN
+        </p>
+
+        <h2 id="mp-contact-title">
+          Interested in following
+          <span>our development journey?</span>
+        </h2>
+
+        <p>
+          Connect with New York Cryogen for
+          general company information,
+          professional inquiries and
+          product-development updates.
+        </p>
+
+        <div class="mp-contact-actions">
+
+          <a href="/contact/" class="button-primary">
+            Contact Our Team
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            href="mailto:bill@nycryogen.com?subject=AC-130%20Viper%20Development%20Updates"
+            class="mp-outline-button"
+          >
+            Request Development Updates
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        <small>
+          Please do not send medical records,
+          diagnoses or other sensitive health
+          information. Inquiries do not reserve
+          a product or schedule treatment.
+        </small>
+
+      </div>
+    </section>
+
   </main>
 </BaseLayout>
