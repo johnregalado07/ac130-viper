@@ -1,26 +1,465 @@
+
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/about.css';
+
+const pageTitle =
+  'About New York Cryogen | AC-130 Viper';
+
+const pageDescription =
+  'Learn about New York Cryogen, founder Gregory Papageorge, and the development journey behind the AC-130 Viper localized CO₂ cooling technology platform.';
 ---
-<BaseLayout title="About New York Cryogen | AC-130 Viper" description="Learn about New York Cryogen and founder Gregory Papageorge, the company developing AC-130 Viper.">
-  <main>
-    <section class="sub-hero">
-      <div class="container">
-        <p class="eyebrow">03 / ABOUT THE COMPANY</p>
-        <h1>The people behind the development.</h1>
-        <p>New York Cryogen, Inc. is developing the AC-130 Viper technology platform.</p>
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+>
+  <main class="about-page">
+
+    <!-- ABOUT PAGE HERO -->
+    <section
+      class="about-hero"
+      aria-labelledby="about-hero-title"
+    >
+      <div class="container about-hero-inner">
+
+        <div class="about-hero-content">
+
+          <p class="about-eyebrow about-eyebrow-light">
+            THE COMPANY BEHIND AC-130 VIPER
+          </p>
+
+          <h1 id="about-hero-title">
+            Engineering with purpose.
+            <span>Innovation with vision.</span>
+          </h1>
+
+          <p class="about-hero-description">
+            Discover New York Cryogen, Inc., the company
+            developing the AC-130 Viper localized CO₂
+            cooling technology platform.
+          </p>
+
+          <div class="about-hero-actions">
+            <a
+              href="#our-story"
+              class="button-primary"
+            >
+              Discover Our Story
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="/technology/"
+              class="about-outline-button"
+            >
+              Explore Technology
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="about-hero-visual">
+
+          <div class="about-hero-image-wrap">
+            <img
+              src="/images/viper-device.png"
+              alt="AC-130 Viper development equipment with monitoring display and cooling applicator"
+              width="1000"
+              height="562"
+              fetchpriority="high"
+            />
+          </div>
+
+          <div class="about-hero-image-caption">
+            <span>AC-130 VIPER</span>
+            <span>TECHNOLOGY IN DEVELOPMENT</span>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <section class="content-section"><div class="container split-layout"><div><p class="eyebrow">OUR STORY</p><h2>A development journey rooted in experience</h2><p>New York Cryogen was founded by Gregory Papageorge. According to the company’s published history, his experience working in medical technology and his personal experience with chronic pain helped inspire the exploration of localized cooling technology.</p><p>Today, the public development focus includes engineering, testing, quality preparation and regulatory work.</p></div><figure class="content-image"><img src="/images/ny-cryogen-studio.jpg" alt="New York Cryogen company branding and development workspace" width="1920" height="1080" loading="lazy" /></figure></div></section>
-    <section class="content-section light-section"><div class="container prose-narrow"><p class="eyebrow">OUR FOCUS</p><h2>Purposeful product development</h2><p>The AC-130 Viper is not commercially available in the United States. This website provides company background and development updates rather than treatment recommendations or an offer to purchase a medical device.</p><a class="text-link" href="/media/">Explore interviews and podcasts ↗</a></div></section>
 
-    <section class="sub-cta">
-      <div class="container">
-        <p class="eyebrow">STAY CONNECTED</p>
-        <h2>Follow the development of AC-130 Viper.</h2>
-        <p>For product-development, company, business or media inquiries, contact New York Cryogen.</p>
-        <a class="button-primary" href="/contact/">Contact New York Cryogen ↗</a>
+    <!-- COMPANY OVERVIEW -->
+    <section
+      id="our-story"
+      class="about-section about-company"
+      aria-labelledby="company-title"
+    >
+      <div class="container about-two-column">
+
+        <div class="about-section-content">
+
+          <p class="about-eyebrow">
+            01 / OUR COMPANY
+          </p>
+
+          <h2 id="company-title">
+            About
+            <span>New York Cryogen.</span>
+          </h2>
+
+          <p class="about-lead">
+            New York Cryogen, Inc. is the company behind
+            the AC-130 Viper, a localized CO₂ cooling
+            technology platform currently under development.
+          </p>
+
+          <p>
+            The company's work is focused on product
+            engineering, testing, design refinement,
+            quality preparation and regulatory activities.
+          </p>
+
+          <p>
+            The AC-130 Viper development program brings
+            together mechanical design, cooling-system
+            concepts, an applicator and a monitoring interface.
+            Its final configuration and capabilities
+            remain subject to development and review.
+          </p>
+
+          <a
+            class="about-text-link"
+            href="/technology/"
+          >
+            Discover the AC-130 Viper Technology
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+        <div class="about-photo-frame">
+
+          <img
+            src="/images/ny-cryogen-studio.jpg"
+            alt="New York Cryogen product-development equipment and company branding"
+            width="1920"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p class="about-image-caption">
+            A look at New York Cryogen and the
+            technology-development program.
+          </p>
+
+        </div>
+
       </div>
     </section>
+
+
+    <!-- FOUNDER -->
+    <section
+      class="about-section about-founder"
+      aria-labelledby="founder-title"
+    >
+      <div class="container about-founder-grid">
+
+        <div class="about-founder-visual">
+
+          <img
+            src="/images/device-demonstration.jpg"
+            alt="Equipment demonstration related to the New York Cryogen development program"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p class="about-image-caption">
+            Equipment demonstration imagery.
+            Not evidence of clinical effectiveness.
+          </p>
+
+        </div>
+
+        <div class="about-section-content">
+
+          <p class="about-eyebrow">
+            02 / THE FOUNDER
+          </p>
+
+          <h2 id="founder-title">
+            Meet
+            <span>Gregory Papageorge.</span>
+          </h2>
+
+          <p class="about-founder-role">
+            Founder & CEO — New York Cryogen, Inc.
+          </p>
+
+          <p>
+            Gregory Papageorge founded New York Cryogen
+            following professional experience in the
+            medical technology field and his own
+            personal experience with chronic pain.
+          </p>
+
+          <p>
+            Earlier in his career, he worked as a complex
+            spine sales representative, providing
+            clinical support related to spinal surgical
+            systems used by neurosurgeons and
+            orthopedic spine surgeons.
+          </p>
+
+          <p>
+            His professional experience, combined with
+            his personal perspective, motivated him to
+            explore localized cooling technology.
+            That exploration eventually developed
+            into the AC-130 Viper program.
+          </p>
+
+          <a
+            class="about-text-link"
+            href="/media/"
+          >
+            Explore Interviews & Media
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DEVELOPMENT STORY -->
+    <section
+      class="about-section about-journey"
+      aria-labelledby="journey-title"
+    >
+      <div class="container">
+
+        <div class="about-center-heading">
+
+          <p class="about-eyebrow about-eyebrow-light">
+            03 / OUR DEVELOPMENT JOURNEY
+          </p>
+
+          <h2 id="journey-title">
+            From an idea to an
+            <span>engineering program.</span>
+          </h2>
+
+          <p>
+            The development of the AC-130 Viper reflects
+            a continuing process of exploration,
+            engineering, testing and refinement.
+          </p>
+
+        </div>
+
+        <div class="about-journey-grid">
+
+          <article class="about-journey-card">
+            <div class="about-journey-number">01</div>
+            <h3>Experience & Motivation</h3>
+            <p>
+              Professional experience in medical
+              technology and a personal interest
+              in localized cooling helped shape
+              the company's development direction.
+            </p>
+          </article>
+
+          <article class="about-journey-card">
+            <div class="about-journey-number">02</div>
+            <h3>Engineering Development</h3>
+            <p>
+              Exploration of mechanical design,
+              a CO₂ delivery concept, an applicator
+              and monitoring-system integration.
+            </p>
+          </article>
+
+          <article class="about-journey-card">
+            <div class="about-journey-number">03</div>
+            <h3>Testing & Evaluation</h3>
+            <p>
+              Continued evaluation of design
+              elements, engineering requirements
+              and product-development documentation.
+            </p>
+          </article>
+
+          <article class="about-journey-card">
+            <div class="about-journey-number">04</div>
+            <h3>Future Development</h3>
+            <p>
+              Further refinement, quality
+              preparation and applicable regulatory
+              activities as the program progresses.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="about-regulatory-notice">
+          <span class="about-notice-symbol" aria-hidden="true">ⓘ</span>
+
+          <p>
+            The AC-130 Viper is under development
+            and is not available for commercial
+            distribution in the United States.
+            Specifications, intended use, labeling
+            and availability may change.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PHOTO GALLERY -->
+    <section
+      class="about-section about-gallery"
+      aria-labelledby="gallery-title"
+    >
+      <div class="container">
+
+        <div class="about-center-heading">
+
+          <p class="about-eyebrow">
+            04 / BEHIND THE TECHNOLOGY
+          </p>
+
+          <h2 id="gallery-title">
+            A closer look at
+            <span>AC-130 Viper.</span>
+          </h2>
+
+          <p>
+            Explore imagery from the development
+            of the AC-130 Viper technology platform.
+          </p>
+
+        </div>
+
+        <div class="about-gallery-grid">
+
+          <figure class="about-gallery-item">
+
+            <img
+              src="/images/viper-device.png"
+              alt="AC-130 Viper system showing its monitoring interface and handheld applicator"
+              width="1000"
+              height="562"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <figcaption>
+              <strong>Technology Platform</strong>
+              <span>
+                Equipment configuration and interface
+              </span>
+            </figcaption>
+
+          </figure>
+
+          <figure class="about-gallery-item">
+
+            <img
+              src="/images/device-demonstration.jpg"
+              alt="Demonstration photograph showing equipment related to the AC-130 Viper"
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <figcaption>
+              <strong>Equipment Demonstration</strong>
+              <span>
+                Development-related photography
+              </span>
+            </figcaption>
+
+          </figure>
+
+          <figure class="about-gallery-item">
+
+            <img
+              src="/images/ny-cryogen-studio.jpg"
+              alt="New York Cryogen development equipment and company branding"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <figcaption>
+              <strong>New York Cryogen</strong>
+              <span>
+                Company and technology development
+              </span>
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- NEXT STEP / CONTACT CTA -->
+    <section
+      class="about-contact"
+      aria-labelledby="about-contact-title"
+    >
+      <div class="container about-contact-inner">
+
+        <p class="about-eyebrow about-eyebrow-light">
+          CONNECT WITH NEW YORK CRYOGEN
+        </p>
+
+        <h2 id="about-contact-title">
+          Interested in learning more about
+          <span>AC-130 Viper?</span>
+        </h2>
+
+        <p>
+          Connect with the team for company,
+          engineering, business, media or general
+          product-development inquiries.
+        </p>
+
+        <div class="about-contact-actions">
+
+          <a
+            href="/contact/"
+            class="button-primary"
+          >
+            Contact Our Team
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            href="/research-development/"
+            class="about-outline-button"
+          >
+            Development Information
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        <small>
+          Inquiries do not reserve a product
+          or schedule medical treatment.
+        </small>
+
+      </div>
+    </section>
+
   </main>
 </BaseLayout>
