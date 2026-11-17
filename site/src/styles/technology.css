@@ -1,0 +1,770 @@
+
+/* ==========================================
+   AC-130 VIPER — TECHNOLOGY PAGE
+   ========================================== */
+
+.technology-page {
+  background: #fff;
+  color: #0b223a;
+}
+
+.technology-page,
+.technology-page * {
+  box-sizing: border-box;
+}
+
+.technology-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.technology-page h1,
+.technology-page h2,
+.technology-page h3,
+.technology-page p {
+  margin-top: 0;
+}
+
+.technology-page h2 {
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 18px 0 25px;
+  color: #0b223a;
+}
+
+.technology-page h2 span {
+  display: block;
+  color: #138de0;
+}
+
+.tech-eyebrow {
+  color: #1179ba;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.tech-eyebrow-light {
+  color: #6ad0fb;
+}
+
+.tech-section {
+  padding: 105px 0;
+  scroll-margin-top: 30px;
+}
+
+.tech-section-copy p:not(.tech-eyebrow),
+.tech-section-heading > p:not(.tech-eyebrow) {
+  color: #536b81;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tech-section-copy .tech-lead {
+  color: #203d56 !important;
+  font-size: 18px !important;
+  font-weight: 550;
+}
+
+.tech-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 750;
+  color: #096fae;
+  text-decoration: none;
+}
+
+.tech-text-link:hover {
+  color: #034974;
+}
+
+/* ==========================================
+   HERO
+   ========================================== */
+
+.tech-hero {
+  background: radial-gradient(
+    ellipse at 85% 45%,
+    #194667 0%,
+    #0d2b47 45%,
+    #061426 100%
+  );
+  color: #fff;
+  overflow: hidden;
+}
+
+.tech-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 60px;
+  min-height: 550px;
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+
+.tech-hero h1 {
+  font-size: clamp(42px, 4.7vw, 67px);
+  line-height: 1.1;
+  letter-spacing: -2.5px;
+  color: #fff;
+  margin: 25px 0;
+  font-weight: 800;
+}
+
+.tech-hero h1 span {
+  display: block;
+  color: #48c7f9;
+}
+
+.tech-hero-description {
+  max-width: 540px;
+  color: #c0d4e6;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.tech-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.tech-outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 22px;
+  border: 1px solid #6c92af;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.tech-outline-button:hover {
+  background: #1b4869;
+  color: #fff;
+}
+
+.tech-hero-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 35px;
+  max-width: 520px;
+}
+
+.tech-hero-notice > span {
+  flex-shrink: 0;
+  font-size: 19px;
+  color: #6ad0fb;
+}
+
+.tech-hero-notice p {
+  font-size: 12px;
+  color: #bad2e3;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.tech-hero-image {
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid #517c99;
+  background: #edf3f8;
+  box-shadow: 0 25px 65px #0005;
+}
+
+.tech-hero-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.tech-hero-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 18px;
+  color: #b3d9ee;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 1px;
+}
+
+/* INFORMATION STRIP */
+
+.tech-info-strip {
+  background: #0b2036;
+  border-top: 1px solid #25415a;
+  border-bottom: 1px solid #25415a;
+}
+
+.tech-strip-inner {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.tech-strip-inner span {
+  color: #c3d9e9;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+}
+
+.tech-strip-inner .tech-strip-separator {
+  color: #48c7f9;
+}
+
+/* ==========================================
+   SYSTEM OVERVIEW
+   ========================================== */
+
+.tech-overview {
+  background: #fff;
+}
+
+.tech-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.tech-overview-image {
+  overflow: hidden;
+  border-radius: 13px;
+  border: 1px solid #dbe6f1;
+  background: #f1f7fc;
+  box-shadow: 0 15px 35px #0714260a;
+}
+
+.tech-overview-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.tech-image-caption {
+  padding: 15px 20px;
+  color: #536b81;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   ENGINEERING FEATURES
+   ========================================== */
+
+.tech-features {
+  background: #f1f7fc;
+}
+
+.tech-section-heading {
+  max-width: 780px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.tech-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.tech-feature-card {
+  padding: 32px 28px;
+  min-height: 285px;
+  border: 1px solid #dbe6f1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 30px #0714260a;
+  transition:
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.tech-feature-card:hover {
+  border-color: #8fcbef;
+  transform: translateY(-3px);
+}
+
+.tech-feature-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.tech-feature-number {
+  font-size: 12px;
+  font-weight: 700;
+  color: #70889d;
+}
+
+.tech-feature-icon {
+  color: #138de0;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.tech-feature-card h3 {
+  color: #0b223a;
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 13px;
+}
+
+.tech-feature-card p {
+  color: #536b81;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* ==========================================
+   APPLICATOR SECTION
+   ========================================== */
+
+.tech-applicator {
+  background: #fff;
+}
+
+.tech-applicator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.tech-applicator-image {
+  overflow: hidden;
+  border-radius: 13px;
+  border: 1px solid #dbe6f1;
+  background: #f1f7fc;
+  box-shadow: 0 15px 35px #0714260a;
+}
+
+.tech-applicator-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.tech-applicator-image p {
+  color: #536b81;
+  font-size: 11px;
+  line-height: 1.7;
+  padding: 16px 20px;
+  margin: 0;
+}
+
+/* ==========================================
+   DEVELOPMENT PROCESS
+   ========================================== */
+
+.tech-development {
+  background: linear-gradient(
+    130deg,
+    #061426,
+    #092138 55%,
+    #0d2b47
+  );
+  color: #fff;
+}
+
+.tech-section-heading-dark h2 {
+  color: #fff;
+}
+
+.tech-section-heading-dark h2 span {
+  color: #48c7f9;
+}
+
+.tech-section-heading-dark > p:not(.tech-eyebrow) {
+  color: #bed1e0;
+}
+
+.tech-development-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tech-development-card {
+  padding: 30px 24px;
+  border: 1px solid #31506a;
+  border-radius: 11px;
+  background: #123149;
+}
+
+.tech-development-number {
+  display: block;
+  color: #48c7f9;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.tech-development-card h3 {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 15px;
+}
+
+.tech-development-card p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #bcd1e0;
+  margin: 0;
+}
+
+.tech-regulatory-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  max-width: 900px;
+  margin: 45px auto 0;
+  padding: 28px;
+  background: #163a55;
+  border: 1px solid #34617f;
+  border-radius: 10px;
+}
+
+.tech-regulatory-icon {
+  color: #77d7ff;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.tech-regulatory-panel h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.tech-regulatory-panel p {
+  color: #c5d8e7;
+  font-size: 12px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* ==========================================
+   PRODUCT GALLERY
+   ========================================== */
+
+.tech-gallery {
+  background: #fff;
+}
+
+.tech-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.tech-gallery-item {
+  margin: 0;
+  border: 1px solid #dbe6f1;
+  border-radius: 12px;
+  background: #f6f9fc;
+  overflow: hidden;
+  box-shadow: 0 12px 30px #0714260a;
+}
+
+.tech-gallery-image {
+  overflow: hidden;
+  background: #e5edf5;
+}
+
+.tech-gallery-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.tech-gallery-item:hover img {
+  transform: scale(1.035);
+}
+
+.tech-gallery-item figcaption {
+  padding: 22px;
+}
+
+.tech-gallery-item h3 {
+  color: #0b223a;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.tech-gallery-item p {
+  color: #536b81;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.tech-gallery-note {
+  text-align: center;
+  max-width: 750px;
+  margin: 27px auto 0;
+  color: #647d91;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   QUESTIONS / INTERNAL LINKS
+   ========================================== */
+
+.tech-questions {
+  background: #f1f7fc;
+}
+
+.tech-questions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.tech-questions-grid > div:first-child > p:not(.tech-eyebrow) {
+  color: #536b81;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.tech-questions-links {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.tech-questions-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid #dbe6f1;
+  border-radius: 10px;
+  padding: 20px 22px;
+  color: #0b223a;
+  text-decoration: none;
+  transition: border-color .2s ease;
+}
+
+.tech-questions-links a:hover {
+  border-color: #138de0;
+}
+
+.tech-questions-links a > span:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tech-questions-links strong {
+  font-size: 15px;
+}
+
+.tech-questions-links small {
+  color: #536b81;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.tech-questions-links a > span:last-child {
+  color: #138de0;
+  font-size: 20px;
+}
+
+/* ==========================================
+   PRE-FOOTER CONTACT
+   ========================================== */
+
+.tech-contact {
+  background: #0D2B47;
+  color: #fff;
+  padding: 100px 0;
+  border-top: 1px solid #2e526f;
+}
+
+.tech-contact-inner {
+  max-width: 870px;
+  text-align: center;
+}
+
+.tech-contact h2 {
+  color: #fff;
+}
+
+.tech-contact h2 span {
+  color: #48c7f9;
+}
+
+.tech-contact-inner > p:not(.tech-eyebrow) {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: #c1d5e6;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.tech-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.tech-contact small {
+  display: block;
+  margin-top: 26px;
+  color: #b4cbdd;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 1050px) {
+  .tech-hero-grid,
+  .tech-overview-grid,
+  .tech-applicator-grid,
+  .tech-questions-grid {
+    gap: 35px;
+  }
+
+  .tech-development-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .tech-hero-grid,
+  .tech-overview-grid,
+  .tech-applicator-grid,
+  .tech-questions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-hero-grid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    min-height: 0;
+  }
+
+  .tech-hero-visual {
+    max-width: 660px;
+  }
+
+  .tech-features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+  .tech-hero h1 {
+    font-size: clamp(38px, 10vw, 50px);
+    letter-spacing: -1.7px;
+  }
+
+  .tech-hero-description {
+    font-size: 14px;
+  }
+
+  .tech-hero-actions,
+  .tech-contact-actions {
+    flex-direction: column;
+  }
+
+  .tech-hero-actions a,
+  .tech-contact-actions a {
+    width: 100%;
+  }
+
+  .tech-section {
+    padding: 75px 0;
+  }
+
+  .tech-features-grid,
+  .tech-development-grid,
+  .tech-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-feature-card {
+    min-height: 0;
+  }
+
+  .tech-regulatory-panel {
+    padding: 20px;
+  }
+
+  .tech-contact {
+    padding: 76px 0;
+  }
+
+  .tech-hero-caption {
+    font-size: 9px;
+  }
+
+  .tech-strip-inner {
+    padding: 22px 0;
+    gap: 12px;
+  }
+
+  .tech-strip-inner span {
+    font-size: 9px;
+  }
+
+  .tech-strip-separator {
+    display: none;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-feature-card,
+  .tech-gallery-image img,
+  .tech-outline-button,
+  .tech-questions-links a {
+    transition: none;
+  }
+}
