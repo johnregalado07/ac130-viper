@@ -1,26 +1,728 @@
+
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/research.css';
+
+const focusAreas = [
+  {
+    number: '01',
+    symbol: '⚙',
+    title: 'Product Engineering',
+    description:
+      'Design work addresses the product architecture, mechanical components, applicator configuration, controls and system integration.'
+  },
+  {
+    number: '02',
+    symbol: '◎',
+    title: 'Testing & Evaluation',
+    description:
+      'Engineering evaluation helps identify design requirements, document observations and inform potential product refinements.'
+  },
+  {
+    number: '03',
+    symbol: '▣',
+    title: 'Quality Preparation',
+    description:
+      'Quality-related preparation and documentation form part of the company’s continuing product-development activities.'
+  },
+  {
+    number: '04',
+    symbol: '◈',
+    title: 'Regulatory Activities',
+    description:
+      'Product information, proposed intended use and supporting documentation are considered in relation to applicable regulatory requirements.'
+  }
+];
+
+const workflow = [
+  {
+    number: '01',
+    title: 'Concept & Requirements',
+    description:
+      'Identify the proposed design requirements and intended engineering objectives.'
+  },
+  {
+    number: '02',
+    title: 'Design & Prototyping',
+    description:
+      'Develop and refine mechanical, control and applicator concepts.'
+  },
+  {
+    number: '03',
+    title: 'Engineering Evaluation',
+    description:
+      'Assess relevant design requirements and document findings that can inform further development.'
+  },
+  {
+    number: '04',
+    title: 'Review & Refinement',
+    description:
+      'Consider documented findings, design changes, quality requirements and applicable regulatory needs.'
+  }
+];
+
+const gallery = [
+  {
+    image: '/images/viper-device.png',
+    alt: 'AC-130 Viper development equipment with screen and handheld applicator',
+    title: 'Development Platform',
+    caption: 'Equipment and interface imagery'
+  },
+  {
+    image: '/images/ny-cryogen-studio.jpg',
+    alt: 'New York Cryogen company branding and equipment',
+    title: 'Company Development',
+    caption: 'New York Cryogen product-development imagery'
+  },
+  {
+    image: '/images/device-demonstration.jpg',
+    alt: 'Photograph showing a cooling equipment demonstration',
+    title: 'Equipment Demonstration',
+    caption: 'Illustrative demonstration imagery'
+  }
+];
 ---
-<BaseLayout title="Research and Development | AC-130 Viper" description="Learn about ongoing AC-130 Viper engineering, testing and regulatory-development activities.">
-  <main>
-    <section class="sub-hero">
-      <div class="container">
-        <p class="eyebrow">02 / RESEARCH & DEVELOPMENT</p>
-        <h1>Development in progress.</h1>
-        <p>An overview of the work supporting the ongoing development program.</p>
+
+<BaseLayout
+  title="Research & Development | AC-130 Viper"
+  description="Learn about the AC-130 Viper development program, including engineering, testing, quality preparation and regulatory status at New York Cryogen."
+>
+  <main class="rd-page">
+
+    <!-- HERO -->
+    <section
+      class="rd-hero"
+      aria-labelledby="rd-hero-title"
+    >
+      <div class="container rd-hero-grid">
+
+        <div class="rd-hero-content">
+
+          <p class="rd-eyebrow rd-eyebrow-light">
+            NEW YORK CRYOGEN / RESEARCH & DEVELOPMENT
+          </p>
+
+          <h1 id="rd-hero-title">
+            Innovation is a process.
+            <span>Engineering is the foundation.</span>
+          </h1>
+
+          <p class="rd-hero-description">
+            Discover the development journey behind the
+            AC-130 Viper, a localized CO₂ cooling
+            technology platform being developed
+            by New York Cryogen, Inc.
+          </p>
+
+          <p class="rd-hero-description">
+            The program brings together product
+            engineering, testing, quality preparation
+            and regulatory-related work.
+          </p>
+
+          <div class="rd-hero-actions">
+
+            <a
+              href="#development-overview"
+              class="button-primary"
+            >
+              Explore Development
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="/technology/"
+              class="rd-outline-button"
+            >
+              View Technology
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="rd-hero-visual">
+
+          <div class="rd-hero-image">
+
+            <img
+              src="/images/viper-device.png"
+              alt="AC-130 Viper development system with monitoring display and handheld applicator"
+              width="1000"
+              height="562"
+              fetchpriority="high"
+            />
+
+          </div>
+
+          <div class="rd-hero-caption">
+            <span>AC-130 VIPER</span>
+            <span>ONGOING PRODUCT DEVELOPMENT</span>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <section class="content-section"><div class="container split-layout"><div><h2>Engineering, testing and documentation</h2><p>New York Cryogen continues work on the AC-130 Viper localized CO₂ cooling platform. Activities described on the existing site include engineering refinement, testing, quality preparation and work relevant to regulatory review.</p><p>Final product configuration, intended use, labeling and timing of any potential availability may change.</p></div><figure class="content-image"><img src="/images/viper-device.png" alt="AC-130 Viper product development system" width="1000" height="562" loading="lazy" /></figure></div></section>
-    <section class="content-section light-section"><div class="container"><h2>Current public information</h2><div class="info-grid"><article class="info-card"><h3>Product</h3><p>Localized CO₂ cooling technology under development.</p></article><article class="info-card"><h3>United States availability</h3><p>Not available for commercial distribution.</p></article><article class="info-card"><h3>Regulatory process</h3><p>Any current FDA submission status must be independently verified with the company before publishing a specific claim.</p></article></div><p class="editorial-note">Research references on the original website require scientific and regulatory review before findings are presented as evidence about AC-130 Viper safety or effectiveness.</p></div></section>
 
-    <section class="sub-cta">
-      <div class="container">
-        <p class="eyebrow">STAY CONNECTED</p>
-        <h2>Follow the development of AC-130 Viper.</h2>
-        <p>For product-development, company, business or media inquiries, contact New York Cryogen.</p>
-        <a class="button-primary" href="/contact/">Contact New York Cryogen ↗</a>
+    <!-- DEVELOPMENT STRIP -->
+    <div class="rd-strip">
+
+      <div class="container rd-strip-inner">
+
+        <span>ENGINEERING</span>
+        <span class="rd-strip-symbol" aria-hidden="true">✦</span>
+
+        <span>TESTING & EVALUATION</span>
+        <span class="rd-strip-symbol" aria-hidden="true">✦</span>
+
+        <span>QUALITY PREPARATION</span>
+        <span class="rd-strip-symbol" aria-hidden="true">✦</span>
+
+        <span>REGULATORY ACTIVITIES</span>
+
       </div>
+
+    </div>
+
+
+    <!-- DEVELOPMENT OVERVIEW -->
+    <section
+      id="development-overview"
+      class="rd-section rd-overview"
+      aria-labelledby="rd-overview-title"
+    >
+
+      <div class="container rd-overview-grid">
+
+        <div class="rd-section-copy">
+
+          <p class="rd-eyebrow">
+            01 / DEVELOPMENT OVERVIEW
+          </p>
+
+          <h2 id="rd-overview-title">
+            Engineering the
+            <span>next chapter.</span>
+          </h2>
+
+          <p class="rd-lead">
+            Building a technology platform involves
+            more than developing individual components.
+          </p>
+
+          <p>
+            New York Cryogen is developing the
+            AC-130 Viper as a localized CO₂ cooling
+            system that combines mechanical design,
+            an applicator and a monitoring interface.
+          </p>
+
+          <p>
+            Ongoing activities include product engineering,
+            testing, quality-related preparation and
+            work associated with applicable
+            regulatory requirements.
+          </p>
+
+          <p>
+            The final product configuration,
+            specifications and intended use
+            have not been established for
+            public release.
+          </p>
+
+          <a
+            href="/technology/"
+            class="rd-text-link"
+          >
+            Explore the Technology
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="rd-overview-image">
+
+          <img
+            src="/images/ny-cryogen-studio.jpg"
+            alt="New York Cryogen technology development equipment and company branding"
+            width="1920"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p>
+            New York Cryogen — development-related imagery
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- FOCUS AREAS -->
+    <section
+      class="rd-section rd-focus"
+      aria-labelledby="rd-focus-title"
+    >
+
+      <div class="container">
+
+        <div class="rd-section-heading">
+
+          <p class="rd-eyebrow">
+            02 / AREAS OF FOCUS
+          </p>
+
+          <h2 id="rd-focus-title">
+            Four areas driving
+            <span>product development.</span>
+          </h2>
+
+          <p>
+            The company has identified engineering,
+            testing, quality preparation and regulatory
+            work as areas of its development program.
+          </p>
+
+        </div>
+
+
+        <div class="rd-focus-grid">
+
+          {
+            focusAreas.map((area) => (
+
+              <article class="rd-focus-card">
+
+                <div class="rd-focus-card-top">
+
+                  <span class="rd-focus-number">
+                    {area.number}
+                  </span>
+
+                  <span
+                    class="rd-focus-symbol"
+                    aria-hidden="true"
+                  >
+                    {area.symbol}
+                  </span>
+
+                </div>
+
+                <h3>{area.title}</h3>
+
+                <p>{area.description}</p>
+
+              </article>
+
+            ))
+          }
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WORKFLOW -->
+    <section
+      class="rd-section rd-workflow"
+      aria-labelledby="rd-workflow-title"
+    >
+
+      <div class="container">
+
+        <div class="rd-section-heading rd-section-heading-dark">
+
+          <p class="rd-eyebrow rd-eyebrow-light">
+            03 / DEVELOPMENT FRAMEWORK
+          </p>
+
+          <h2 id="rd-workflow-title">
+            From concept to
+            <span>continued evaluation.</span>
+          </h2>
+
+          <p>
+            Product development is iterative.
+            The framework below illustrates
+            activities commonly considered
+            during engineering work.
+          </p>
+
+        </div>
+
+
+        <div class="rd-workflow-grid">
+
+          {
+            workflow.map((step) => (
+
+              <article class="rd-workflow-card">
+
+                <span class="rd-workflow-number">
+                  {step.number}
+                </span>
+
+                <h3>{step.title}</h3>
+
+                <p>{step.description}</p>
+
+              </article>
+
+            ))
+          }
+
+        </div>
+
+
+        <p class="rd-workflow-note">
+          This framework is illustrative and does not
+          represent an audited project timeline,
+          completed milestone list or development schedule.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- REGULATORY STATUS -->
+    <section
+      class="rd-section rd-regulatory"
+      aria-labelledby="rd-regulatory-title"
+    >
+
+      <div class="container rd-regulatory-grid">
+
+        <div class="rd-section-copy">
+
+          <p class="rd-eyebrow">
+            04 / REGULATORY STATUS
+          </p>
+
+          <h2 id="rd-regulatory-title">
+            Transparency throughout
+            <span>development.</span>
+          </h2>
+
+          <p>
+            New York Cryogen identifies the
+            AC-130 Viper as a product currently
+            under development.
+          </p>
+
+          <p>
+            The company’s published information
+            states that FDA 510(k) clearance
+            is pending. This statement should
+            be reconfirmed by the company
+            before the redesigned website
+            is launched publicly.
+          </p>
+
+          <p>
+            Product specifications, labeling,
+            intended use and availability
+            remain subject to further development
+            and applicable regulatory review.
+          </p>
+
+          <a
+            href="/faq/"
+            class="rd-text-link"
+          >
+            Read Frequently Asked Questions
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="rd-status-card">
+
+          <div class="rd-status-header">
+            <span>PRODUCT STATUS</span>
+            <span class="rd-status-indicator">
+              ● IN DEVELOPMENT
+            </span>
+          </div>
+
+          <dl class="rd-status-list">
+
+            <div>
+              <dt>Product</dt>
+              <dd>AC-130 Viper</dd>
+            </div>
+
+            <div>
+              <dt>Developer</dt>
+              <dd>New York Cryogen, Inc.</dd>
+            </div>
+
+            <div>
+              <dt>Technology</dt>
+              <dd>Localized CO₂ Cooling</dd>
+            </div>
+
+            <div>
+              <dt>Development</dt>
+              <dd>Ongoing</dd>
+            </div>
+
+            <div>
+              <dt>US commercial availability</dt>
+              <dd>Not available</dd>
+            </div>
+
+          </dl>
+
+          <div class="rd-status-notice">
+
+            <span aria-hidden="true">ⓘ</span>
+
+            <p>
+              This page provides general
+              product-development information.
+              It is not an offer to sell the
+              device, arrange treatment or
+              reserve a product.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DEVELOPMENT GALLERY -->
+    <section
+      class="rd-section rd-gallery"
+      aria-labelledby="rd-gallery-title"
+    >
+
+      <div class="container">
+
+        <div class="rd-section-heading">
+
+          <p class="rd-eyebrow">
+            05 / DEVELOPMENT IMAGERY
+          </p>
+
+          <h2 id="rd-gallery-title">
+            Inside the
+            <span>development program.</span>
+          </h2>
+
+          <p>
+            A look at selected equipment
+            and company imagery associated
+            with the AC-130 Viper.
+          </p>
+
+        </div>
+
+        <div class="rd-gallery-grid">
+
+          {
+            gallery.map((item) => (
+
+              <figure class="rd-gallery-item">
+
+                <div class="rd-gallery-image">
+
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    width="1000"
+                    height="650"
+                    loading="lazy"
+                    decoding="async"
+                  />
+
+                </div>
+
+                <figcaption>
+
+                  <h3>{item.title}</h3>
+
+                  <p>{item.caption}</p>
+
+                </figcaption>
+
+              </figure>
+
+            ))
+          }
+
+        </div>
+
+        <p class="rd-gallery-disclaimer">
+          Equipment and demonstration photographs
+          are illustrative and should not be
+          interpreted as evidence of clinical safety,
+          efficacy, regulatory authorization or
+          completed product specifications.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUESTIONS -->
+    <section
+      class="rd-section rd-information"
+      aria-labelledby="rd-information-title"
+    >
+
+      <div class="container rd-information-grid">
+
+        <div>
+
+          <p class="rd-eyebrow">
+            06 / MORE INFORMATION
+          </p>
+
+          <h2 id="rd-information-title">
+            Continue exploring
+            <span>AC-130 Viper.</span>
+          </h2>
+
+          <p>
+            Learn about the technology,
+            company background and
+            general product information.
+          </p>
+
+        </div>
+
+        <div class="rd-information-links">
+
+          <a href="/technology/">
+
+            <span>
+              <strong>Technology Overview</strong>
+              <small>
+                Discover the engineering platform
+              </small>
+            </span>
+
+            <span aria-hidden="true">↗</span>
+
+          </a>
+
+          <a href="/about/">
+
+            <span>
+              <strong>About New York Cryogen</strong>
+              <small>
+                Learn about the company and founder
+              </small>
+            </span>
+
+            <span aria-hidden="true">↗</span>
+
+          </a>
+
+          <a href="/medical-professionals/">
+
+            <span>
+              <strong>Medical Professionals</strong>
+              <small>
+                General development information
+              </small>
+            </span>
+
+            <span aria-hidden="true">↗</span>
+
+          </a>
+
+          <a href="/faq/">
+
+            <span>
+              <strong>Frequently Asked Questions</strong>
+              <small>
+                Product and availability information
+              </small>
+            </span>
+
+            <span aria-hidden="true">↗</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRE-FOOTER -->
+    <section
+      class="rd-contact"
+      aria-labelledby="rd-contact-title"
+    >
+
+      <div class="container rd-contact-inner">
+
+        <p class="rd-eyebrow rd-eyebrow-light">
+          FOLLOW THE DEVELOPMENT JOURNEY
+        </p>
+
+        <h2 id="rd-contact-title">
+          Stay connected with
+          <span>New York Cryogen.</span>
+        </h2>
+
+        <p>
+          Contact the team for
+          engineering, business, media
+          and general product-development
+          inquiries.
+        </p>
+
+        <div class="rd-contact-actions">
+
+          <a
+            href="/contact/"
+            class="button-primary"
+          >
+            Contact Our Team
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            href="/media/"
+            class="rd-outline-button"
+          >
+            Explore Media
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        <small>
+          The AC-130 Viper is under development.
+          Inquiries do not reserve a device
+          or schedule treatment.
+        </small>
+
+      </div>
+
+    </section>
+
   </main>
 </BaseLayout>
